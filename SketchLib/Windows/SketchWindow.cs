@@ -2,11 +2,11 @@ using System;
 using Gtk;
 using Sketch;
 
-public partial class MainWindow: Gtk.Window
+public partial class SketchWindow: Gtk.Window
 {	
 	public App m_app;
 
-	public MainWindow (): base (Gtk.WindowType.Toplevel)
+	public SketchWindow (): base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
 
