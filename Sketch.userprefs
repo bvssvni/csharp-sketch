@@ -1,0 +1,52 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sketch/MainWindow.cs">
+    <Files>
+      <File FileName="Sketch/todo.txt" Line="7" Column="48" />
+      <File FileName="Sketch/Objects/Frame.cs" Line="1" Column="1" />
+      <File FileName="Sketch/Objects/Stroke.cs" Line="1" Column="1" />
+      <File FileName="Sketch/Objects/OpenBinaryFormat.cs" Line="136" Column="15" />
+      <File FileName="Sketch/Application/App.cs" Line="129" Column="3" />
+      <File FileName="Sketch/Objects/FrameSequence.cs" Line="1" Column="1" />
+      <File FileName="Sketch/Tests/TestOpenSave.cs" Line="1" Column="1" />
+      <File FileName="Sketch/Objects/Point.cs" Line="1" Column="1" />
+      <File FileName="Sketch/MainWindow.cs" Line="126" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Sketch" expanded="True">
+            <Node name="Application" expanded="True" />
+            <Node name="Controls" expanded="True" />
+            <Node name="Modules" expanded="True" />
+            <Node name="Objects" expanded="True" />
+            <Node name="Tests" expanded="True" />
+            <Node name="MainWindow.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="Sketch" expanded="True">
+            <Node name="Sketch" expanded="True">
+              <Node name="TestOpenSave" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

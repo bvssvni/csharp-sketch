@@ -1,0 +1,44 @@
+* Completed on same day.
++ Completed on later day.
+- Decided against on later day.
+
+23.03.2013
+
+*Make undo operation change selected frame.
+*BUG: When undo and then redoing.
+*When mouse up, add point.
+*Do not show full file path, only filename in title.
+*Clear history when saving.
+*Make fileextension configurable.
+*Save as.
+*BUG: When undoing and '*' does not disappear at first undo level.
+*Undo action for removing frame.
+*Undo action for adding frame.
+*Refresh title when adding stroke.
+*Show filename in title.
+*When clicking new document, open up new window.
+*Read document.
+*BUG: Error when reading document.
+*Make save document does not use file extension.
+*Save document.
+*Set opacity to 0.03 when at end frame.
+*Redo stroke.
+
+22.03.2013
+
++Redo stroke.
+*Undo stroke.
+*Copy method of stroke.
+*Refresh graphics at stopping preview.
+*When clicking play, preview animation.
+*When creating a new frame, insert it.
+*Draw next frame as semi-transparent blue.
+*Draw previous frame as semi-transparent red.
+*Remove frame when clicking on '-'.
+*Navigate to last frame when clicking '->|'.
+*Navigate to first frame when clicking '|<-'.
+*Navigate to next frame when clicking '->'.
+*Navigate to previous frame when clicking '<-'.
+*Add new frame when clicking '+'.
+*Show selected frame in title.
+*Draw with a black line on the screen.

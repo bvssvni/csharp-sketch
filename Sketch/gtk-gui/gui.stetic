@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../../SketchLib/bin/Debug/SketchLib.dll" />
+    <widget-library name="../bin/Debug/Sketch.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="567 400">
+    <action-group name="Default">
+      <action id="newAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-new</property>
+        <signal name="Activated" handler="OnNewActionActivated" />
+      </action>
+      <action id="openAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-open</property>
+        <signal name="Activated" handler="OnOpenActionActivated" />
+      </action>
+      <action id="saveAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-save</property>
+        <signal name="Activated" handler="OnSaveActionActivated" />
+      </action>
+      <action id="saveAsAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-save-as</property>
+        <signal name="Activated" handler="OnSaveAsActionActivated" />
+      </action>
+      <action id="undoAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-undo</property>
+      </action>
+      <action id="redoAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-redo</property>
+      </action>
+      <action id="gotoFirstAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-goto-first</property>
+        <signal name="Activated" handler="OnGotoFirstActionActivated" />
+      </action>
+      <action id="goBackAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-go-back</property>
+        <signal name="Activated" handler="OnGoBackActionActivated" />
+      </action>
+      <action id="goForwardAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-go-forward</property>
+        <signal name="Activated" handler="OnGoForwardActionActivated" />
+      </action>
+      <action id="gotoLastAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-goto-last</property>
+        <signal name="Activated" handler="OnGotoLastActionActivated" />
+      </action>
+      <action id="mediaPlayAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-media-play</property>
+        <signal name="Activated" handler="OnMediaPlayActionActivated" />
+      </action>
+      <action id="mediaStopAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-media-stop</property>
+        <signal name="Activated" handler="OnMediaStopActionActivated" />
+      </action>
+      <action id="addAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-add</property>
+        <signal name="Activated" handler="OnAddActionActivated" />
+      </action>
+      <action id="removeAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-remove</property>
+        <signal name="Activated" handler="OnRemoveActionActivated" />
+      </action>
+      <action id="undoAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-undo</property>
+        <signal name="Activated" handler="OnUndoAction1Activated" />
+      </action>
+      <action id="redoAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-redo</property>
+        <signal name="Activated" handler="OnRedoAction1Activated" />
+      </action>
+      <action id="FileAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">File</property>
+        <property name="ShortLabel" translatable="yes">File</property>
+      </action>
+      <action id="newAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">_New</property>
+        <property name="ShortLabel" translatable="yes">_New</property>
+        <property name="StockId">gtk-new</property>
+      </action>
+      <action id="openAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Open...</property>
+        <property name="ShortLabel" translatable="yes">Open...</property>
+        <property name="StockId">gtk-open</property>
+      </action>
+      <action id="saveAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Save</property>
+        <property name="ShortLabel" translatable="yes">Save</property>
+        <property name="StockId">gtk-save</property>
+      </action>
+      <action id="saveAsAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Save As...</property>
+        <property name="ShortLabel" translatable="yes">Save As...</property>
+        <property name="StockId">gtk-save-as</property>
+      </action>
+      <action id="EditAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Edit</property>
+        <property name="ShortLabel" translatable="yes">Edit</property>
+      </action>
+      <action id="undoAction2">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Control&gt;y</property>
+        <property name="Label" translatable="yes">Undo</property>
+        <property name="ShortLabel" translatable="yes">Undo</property>
+        <property name="StockId">gtk-undo</property>
+      </action>
+      <action id="redoAction2">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">_Redo</property>
+        <property name="ShortLabel" translatable="yes">_Redo</property>
+        <property name="StockId">gtk-redo</property>
+      </action>
+      <action id="FrameAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Frame</property>
+        <property name="ShortLabel" translatable="yes">Frame</property>
+      </action>
+      <action id="addAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Add</property>
+        <property name="ShortLabel" translatable="yes">Add</property>
+        <property name="StockId">gtk-add</property>
+      </action>
+      <action id="removeAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Delete</property>
+        <property name="ShortLabel" translatable="yes">Delete</property>
+        <property name="StockId">gtk-remove</property>
+      </action>
+      <action id="gotoFirstAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">First</property>
+        <property name="ShortLabel" translatable="yes">First</property>
+        <property name="StockId">gtk-goto-first</property>
+      </action>
+      <action id="goBackAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Previous</property>
+        <property name="ShortLabel" translatable="yes">Previous</property>
+        <property name="StockId">gtk-go-back</property>
+      </action>
+      <action id="goForwardAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Next</property>
+        <property name="ShortLabel" translatable="yes">Next</property>
+        <property name="StockId">gtk-go-forward</property>
+      </action>
+      <action id="gotoLastAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Last</property>
+        <property name="ShortLabel" translatable="yes">Last</property>
+        <property name="StockId">gtk-goto-last</property>
+      </action>
+      <action id="AnimationAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Animation</property>
+        <property name="ShortLabel" translatable="yes">Animation</property>
+      </action>
+      <action id="mediaPlayAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Play</property>
+        <property name="ShortLabel" translatable="yes">Play</property>
+        <property name="StockId">gtk-media-play</property>
+      </action>
+      <action id="mediaStopAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Stop</property>
+        <property name="ShortLabel" translatable="yes">Stop</property>
+        <property name="StockId">gtk-media-stop</property>
+      </action>
+    </action-group>
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterAlways</property>
+    <property name="BorderWidth">10</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.VBox" id="vbox2">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.Toolbar" id="toolbar2">
+            <property name="MemberName" />
+            <property name="ShowArrow">False</property>
+            <property name="IconSize">LargeToolbar</property>
+            <node name="__gtksharp_140_Stetic_Editor_ActionToolbar" type="Toolbar">
+              <node type="Toolitem" action="newAction" />
+              <node type="Toolitem" action="openAction" />
+              <node type="Toolitem" action="saveAction" />
+              <node type="Toolitem" action="saveAsAction" />
+              <node type="Separator" />
+              <node type="Toolitem" action="undoAction1" />
+              <node type="Toolitem" action="redoAction1" />
+              <node type="Separator" />
+              <node type="Toolitem" action="addAction" />
+              <node type="Toolitem" action="removeAction" />
+              <node type="Separator" />
+              <node type="Toolitem" action="gotoFirstAction" />
+              <node type="Toolitem" action="goBackAction" />
+              <node type="Toolitem" action="goForwardAction" />
+              <node type="Toolitem" action="gotoLastAction" />
+              <node type="Separator" />
+              <node type="Toolitem" action="mediaPlayAction" />
+              <node type="Toolitem" action="mediaStopAction" />
+            </node>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Sketch.SketchControl" id="sketchcontrol1">
+            <property name="MemberName" />
+            <property name="WidthRequest">400</property>
+            <property name="HeightRequest">300</property>
+            <property name="Preview">False</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

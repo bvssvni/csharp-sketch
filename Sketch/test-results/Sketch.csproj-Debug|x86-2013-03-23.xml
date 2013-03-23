@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2013-03-23T11:16:48</TestDate>
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-03-23T11:17:46</TestDate>
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-03-23T11:27:33</TestDate>
+      <Passed>1</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-03-23T11:30:08</TestDate>
+      <Passed>1</Passed>
+      <Errors>2</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="Sketch">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2013-03-23T11:16:48</TestDate>
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-03-23T11:17:46</TestDate>
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-03-23T11:27:33</TestDate>
+          <Passed>1</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-03-23T11:30:08</TestDate>
+          <Passed>1</Passed>
+          <Errors>2</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="TestOpenSave">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-03-23T11:16:48</TestDate>
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-03-23T11:17:46</TestDate>
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-03-23T11:27:33</TestDate>
+              <Passed>1</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-03-23T11:30:08</TestDate>
+              <Passed>1</Passed>
+              <Errors>2</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-03-23T12:11:28</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.19ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-03-23T12:11:49</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.18ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestOpenSaveStroke">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:16:48</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Stroke' got 'Length'.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:46 
+  at Sketch.Frame.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/Frame.cs:42 
+  at Sketch.FrameSequence.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/FrameSequence.cs:31 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x00099] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:30 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:17:46</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Stroke' got 'Length'.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:46 
+  at Sketch.Frame.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/Frame.cs:42 
+  at Sketch.FrameSequence.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/FrameSequence.cs:31 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x00099] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:30 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:30:08</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:31:01</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:31:40</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Length
+X
+Y
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:44:35</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>19
+52
+66
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:45:04</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>19
+52
+66
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:45:16</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>19
+52
+66
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:45:50</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>19
+52
+66
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:46:40</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:47:57</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000eb] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:158 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block 0
+write block 34
+write block 80
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:48:19</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0010f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block 0
+write block 34
+write block 80
+read block 0
+read block 34
+read block 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:57:29</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0010f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block 0
+write block 34
+write block 80
+read block 0
+read block 34
+read block 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:57:56</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0010f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block 0
+write block 34
+write block 80
+read block 0
+read block 34
+read block 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:58:40</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0013f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block Stroke 0
+write block Point 34
+write block Point 80
+read block Stroke 0
+read Length
+read block Point 34
+read X
+read Y
+read block Point 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:01:37</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0013f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write block Stroke 0
+write block Point 34
+write block Point 80
+read block Stroke 0
+read Length
+read block Point 34
+read X
+read Y
+end block 72
+read block Point 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:06:05</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:31 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write 44
+write 90
+read 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:10:05</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0013f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:31 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write 44
+write Point 80
+write 90
+read Stroke 0
+read Point 34
+read Point 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:10:22</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0013f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write Point 80
+read Stroke 0
+read Point 34
+read Point 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:02</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x0013f] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:161 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.TestOpenSave.TestOpenSaveStroke () [0x0006f] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:41 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write Point 80
+read Stroke 0
+read Point 34
+read Point 72
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:22</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write Point 80
+read Stroke 0
+read Point 34
+read Point 80
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:28</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write Point 80
+read Stroke 0
+read Point 34
+read Point 80
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:49</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput>write Stroke 0
+write Point 34
+write Point 80
+read Stroke 0
+read Point 34
+read Point 80
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestOpenSaveFrameData">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:27:33</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.Frame.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/Frame.cs:42 
+  at Sketch.FrameSequence.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/FrameSequence.cs:31 
+  at Sketch.TestOpenSave.TestOpenSaveFrameData () [0x00099] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:49 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:30:08</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Expected 'Point' got ''.</Message>
+                  <StackTrace>  at Obf.OpenBinaryFormat.StartBlock (System.String id) [0x000c7] in /Volumes/sven/USB/Sketch/Sketch/Objects/OpenBinaryFormat.cs:155 
+  at Sketch.Point.Read (Obf.OpenBinaryFormat r) [0x00000] in /Volumes/sven/USB/Sketch/Sketch/Objects/Point.cs:28 
+  at Sketch.Stroke.Read (Obf.OpenBinaryFormat r) [0x00039] in /Volumes/sven/USB/Sketch/Sketch/Objects/Stroke.cs:50 
+  at Sketch.Frame.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/Frame.cs:42 
+  at Sketch.FrameSequence.Read (Obf.OpenBinaryFormat r) [0x00027] in /Volumes/sven/USB/Sketch/Sketch/Objects/FrameSequence.cs:31 
+  at Sketch.TestOpenSave.TestOpenSaveFrameData () [0x00099] in /Volumes/sven/USB/Sketch/Sketch/Tests/TestOpenSave.cs:70 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:28</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.03ms</Message>
+                  <ConsoleOutput>write FrameSequence 0
+write Frame 47
+write Stroke 87
+write Point 121
+write Point 167
+read FrameSequence 0
+read Frame 47
+read Stroke 87
+read Point 121
+read Point 167
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:49</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.03ms</Message>
+                  <ConsoleOutput>write FrameSequence 0
+write Frame 47
+write Stroke 87
+write Point 121
+write Point 167
+read FrameSequence 0
+read Frame 47
+read Stroke 87
+read Point 121
+read Point 167
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestOpenSavePoint">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:27:33</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T11:30:08</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:28</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput>write Point 0
+read Point 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-03-23T12:11:49</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                  <ConsoleOutput>write Point 0
+read Point 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
