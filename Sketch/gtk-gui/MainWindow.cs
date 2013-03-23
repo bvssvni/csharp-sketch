@@ -158,7 +158,11 @@ public partial class MainWindow
 		w2.Expand = false;
 		w2.Fill = false;
 		// Container child vbox2.Gtk.Box+BoxChild
-		this.sketchcontrol1 = null;
+		this.sketchcontrol1 = new global::Sketch.SketchControl ();
+		this.sketchcontrol1.WidthRequest = 400;
+		this.sketchcontrol1.HeightRequest = 300;
+		this.sketchcontrol1.Name = "sketchcontrol1";
+		this.sketchcontrol1.Preview = false;
 		this.vbox2.Add (this.sketchcontrol1);
 		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.sketchcontrol1]));
 		w3.Position = 1;

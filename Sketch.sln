@@ -27,6 +27,6 @@ Global
 		{B6CFE1CD-C63A-4528-805B-F7BA24B04958}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = SketchToVideo\SketchToVideo.csproj
+		StartupItem = Sketch\Sketch.csproj
 	EndGlobalSection
 EndGlobal
