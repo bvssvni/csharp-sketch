@@ -1,28 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sketch/MainWindow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Objects/Frame.cs">
     <Files>
-      <File FileName="Sketch/todo.txt" Line="7" Column="48" />
-      <File FileName="Sketch/Objects/Frame.cs" Line="1" Column="1" />
-      <File FileName="Sketch/Objects/Stroke.cs" Line="1" Column="1" />
-      <File FileName="Sketch/Objects/OpenBinaryFormat.cs" Line="136" Column="15" />
-      <File FileName="Sketch/Application/App.cs" Line="129" Column="3" />
-      <File FileName="Sketch/Objects/FrameSequence.cs" Line="1" Column="1" />
-      <File FileName="Sketch/Tests/TestOpenSave.cs" Line="1" Column="1" />
-      <File FileName="Sketch/Objects/Point.cs" Line="1" Column="1" />
-      <File FileName="Sketch/MainWindow.cs" Line="126" Column="32" />
+      <File FileName="SketchToVideo/MainWindow.cs" Line="37" Column="21" />
+      <File FileName="SketchLib/Objects/Frame.cs" Line="56" Column="30" />
+      <File FileName="SketchLib/Modules/CairoFill.cs" Line="16" Column="26" />
+      <File FileName="SketchLib/Objects/FrameSequence.cs" Line="43" Column="113" />
+      <File FileName="SketchLib/todo.txt" Line="7" Column="45" />
+      <File FileName="SketchLib/Application/App.cs" Line="143" Column="15" />
+      <File FileName="SketchLib/Modules/CairoFrame.cs" Line="4" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Sketch" expanded="True">
+          <Node name="SketchLib" expanded="True" selected="True">
             <Node name="Application" expanded="True" />
-            <Node name="Controls" expanded="True" />
             <Node name="Modules" expanded="True" />
             <Node name="Objects" expanded="True" />
-            <Node name="Tests" expanded="True" />
-            <Node name="MainWindow.cs" selected="True" />
           </Node>
+          <Node name="SketchToVideo" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -35,13 +31,7 @@
         <State selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="Sketch" expanded="True">
-            <Node name="Sketch" expanded="True">
-              <Node name="TestOpenSave" expanded="True" selected="True" />
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

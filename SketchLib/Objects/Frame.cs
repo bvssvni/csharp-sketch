@@ -13,14 +13,7 @@ namespace Sketch
 		}
 
 		public void Draw(Cairo.Context context) {
-			context.LineWidth = 3;
-			context.LineCap = Cairo.LineCap.Round;
-
-			var n = Strokes.Count;
-			for (var i = 0; i < n; i++) {
-				var stroke = Strokes[i];
-				stroke.Draw(context);
-			}
+			CairoFrame.Draw(context, this);
 		}
 
 		public Frame Copy() {
@@ -54,6 +47,14 @@ namespace Sketch
 			}
 
 			r.EndBlock(frame);
+		}
+
+		public void RenderToSurface(Cairo.ImageSurface surface) {
+			using (var context = new Cairo.Context(surface)) {
+				CairoFill.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
+				context.Color = new Cairo.Color(0, 0, 0);
+				CairoFrame.Draw(context, this);
+			}
 		}
 	}
 }

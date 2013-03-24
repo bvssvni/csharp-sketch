@@ -2,8 +2,14 @@
 + Completed on later day.
 - Decided against on later day.
 
+24.03.2013
+
+*Convert PNG to mp4.
+*Move drawing code of Frame to module.
+
 23.03.2013
 
+When reading and saving, log error messages.
 *Make undo operation change selected frame.
 *BUG: When undo and then redoing.
 *When mouse up, add point.

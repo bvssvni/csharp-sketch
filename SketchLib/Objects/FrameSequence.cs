@@ -34,6 +34,17 @@ namespace Sketch
 
 			r.EndBlock(frameSequence);
 		}
+
+		public void ExportToPngs(string directory) {
+			var surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 400, 300);
+			var n = this.Frames.Count;
+			for (int i = 0; i < n; i++) {
+				var frame = this.Frames[i];
+				string filename = directory + System.IO.Path.DirectorySeparatorChar + i.ToString().PadLeft(6, '0') + ".png";
+				frame.RenderToSurface(surface);
+				surface.WriteToPng(filename);
+			}
+		}
 	}
 }
 
