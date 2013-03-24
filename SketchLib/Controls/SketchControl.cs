@@ -43,6 +43,10 @@ namespace Sketch
 			}
 		}
 
+		public bool IsBusy() {
+			return m_preview > 0;
+		}
+
 		private void RunPreview() {
 			m_previewFrame = 0;
 			m_preview = 2;
@@ -64,9 +68,11 @@ namespace Sketch
 
 		public SketchControl ()
 		{
+			var mousedown = false;
+
 			// Insert initialization code here.
 			this.ButtonPressEvent += delegate(object o, Gtk.ButtonPressEventArgs args) {
-				if (m_preview > 0) return;
+				if (m_app.IsBusy()) return;
 				if (m_app == null) return;
 				if (!m_app.HasSelectedFrame) return;
 				if (args.Event.Button != 1) return;
@@ -74,9 +80,10 @@ namespace Sketch
 				var stroke = new Stroke();
 				stroke.Add(new Point(args.Event.X, args.Event.Y));
 				m_app.BeginStroke(stroke);
+				mousedown = true;
 			};
 			this.ButtonReleaseEvent += delegate(object o, Gtk.ButtonReleaseEventArgs args) {
-				if (m_preview > 0) return;
+				if (m_app.IsBusy()) return;
 				if (m_app == null) return;
 				if (!m_app.HasSelectedFrame) return;
 				if (args.Event.Button != 1) return;
@@ -87,12 +94,15 @@ namespace Sketch
 				lastStroke.Add(new Point(args.Event.X, args.Event.Y));
 
 				m_app.EndStroke();
+				mousedown = false;
 
 				m_app.RefreshTitle();
 				m_app.RefreshGraphics();
 			};
 			this.MotionNotifyEvent += delegate(object o, Gtk.MotionNotifyEventArgs args) {
-				if (m_preview > 0) return;
+				if (m_app.IsBusy()) return;
+				if (!mousedown) return;
+
 				var state = (ModifierType)args.Event.State;
 				if ((state & ModifierType.Button1Mask) != 0) {
 					if (m_app == null) return;
@@ -121,6 +131,7 @@ namespace Sketch
 
 			using (var context = Gdk.CairoHelper.Create (ev.Window)) {
 				CairoFill.Fill(context, this, new Cairo.Color(1, 1, 1));
+				context.Antialias = Cairo.Antialias.Subpixel;
 
 				if (m_preview == 0) {
 					m_app.DrawSelectedFrame(context);

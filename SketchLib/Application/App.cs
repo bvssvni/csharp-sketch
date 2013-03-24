@@ -12,9 +12,11 @@ namespace Sketch
 		public History History;
 
 		public delegate void RefreshDelegate();
+		public delegate bool IsBusyDelegate();
 
 		public RefreshDelegate RefreshGraphics;
 		public RefreshDelegate RefreshTitle;
+		public IsBusyDelegate IsBusy;
 
 		public bool HasSelectedFrame {
 			get {
@@ -103,31 +105,31 @@ namespace Sketch
 
 		public void DrawSelectedFrame(Cairo.Context context) {
 			var prevFrame = this.SelectedFrame-1;
-			var prevOpacity = 0.1;
+			var prevOpacity = 0.2;
 			if (prevFrame < 0) {
 				prevFrame = this.FrameData.Frames.Count-1;
-				prevOpacity = 0.05;
+				prevOpacity = 0.1;
 			}
 
 			var nextFrame = this.SelectedFrame+1;
-			var nextOpacity = 0.1;
+			var nextOpacity = 0.2;
 			if (nextFrame >= this.FrameData.Frames.Count) {
 				nextFrame = 0;
-				nextOpacity = 0.05;
+				nextOpacity = 0.1;
 			}
 
 			if (prevFrame != SelectedFrame) {
 				context.Color = new Cairo.Color(1, 0, 0, prevOpacity);
 				FrameData.Frames[prevFrame].Draw(context);
 			}
-
-			context.Color = new Cairo.Color(0, 0, 0);
-			FrameData.Frames[SelectedFrame].Draw(context);
-
 			if (nextFrame != SelectedFrame) {
 				context.Color = new Cairo.Color(0, 0, 1, nextOpacity);
 				FrameData.Frames[nextFrame].Draw(context);
 			}
+
+			context.Color = new Cairo.Color(0, 0, 0);
+			FrameData.Frames[SelectedFrame].Draw(context);
+
 		}
 
 		public void Save(string filename) {

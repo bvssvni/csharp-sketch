@@ -13,6 +13,7 @@ public partial class SketchWindow: Gtk.Window
 		m_app = new App();
 		m_app.RefreshTitle = this.RefreshTitle;
 		m_app.RefreshGraphics = sketchcontrol1.RefreshGraphics;
+		m_app.IsBusy = sketchcontrol1.IsBusy;
 
 		sketchcontrol1.App = m_app;
 
@@ -30,12 +31,18 @@ public partial class SketchWindow: Gtk.Window
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) {
+			a.RetVal = true;
+			return;
+		}
+
 		Application.Quit ();
-		a.RetVal = true;
 	}
 	protected void OnAddActionActivated (object sender, EventArgs e)
 	{
 		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
 		
 		m_app.AddNewFrame();
 		
@@ -47,6 +54,7 @@ public partial class SketchWindow: Gtk.Window
 	{
 		if (m_app == null) return;
 		if (!m_app.HasNextFrame) return;
+		if (m_app.IsBusy()) return;
 
 		m_app.SelectedFrame++;
 
@@ -58,6 +66,7 @@ public partial class SketchWindow: Gtk.Window
 	{
 		if (m_app == null) return;
 		if (!m_app.HasPreviousFrame) return;
+		if (m_app.IsBusy()) return;
 
 		m_app.SelectedFrame--;
 
@@ -68,6 +77,7 @@ public partial class SketchWindow: Gtk.Window
 	protected void OnGotoFirstActionActivated (object sender, EventArgs e)
 	{
 		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
 
 		m_app.NavigateToFirstFrame();
 
@@ -78,6 +88,7 @@ public partial class SketchWindow: Gtk.Window
 	protected void OnGotoLastActionActivated (object sender, EventArgs e)
 	{
 		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
 
 		m_app.NavigateToLastFrame();
 
@@ -89,6 +100,7 @@ public partial class SketchWindow: Gtk.Window
 	{
 		if (m_app == null) return;
 		if (!m_app.HasMoreThanOneFrame) return;
+		if (m_app.IsBusy()) return;
 
 		m_app.RemoveSelectedFrame();
 
@@ -98,6 +110,9 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnMediaPlayActionActivated (object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		sketchcontrol1.Preview = true;
 	}
 
@@ -108,16 +123,25 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnUndoAction1Activated (object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		m_app.History.Undo(m_app);
 	}
 
 	protected void OnRedoAction1Activated (object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		m_app.History.Redo(m_app);
 	}
 
 	protected void OnSaveActionActivated (object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		var filename = m_app.FileName;
 		if (filename == null) filename = Utils.SaveFile.WithFilters(this, "*." + m_app.FileExtension);
 		if (filename == null) return;
@@ -130,6 +154,9 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnOpenActionActivated (object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		var filename = Utils.OpenFile.WithFilters(this, "*." + m_app.FileExtension);
 		if (filename == null) return;
 
@@ -141,12 +168,18 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnNewActionActivated(object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		// If the program is started by passing file to command line, this might not work.
 		System.Diagnostics.Process.Start(Environment.CommandLine);
 	}
 	
 	protected void OnSaveAsActionActivated(object sender, EventArgs e)
 	{
+		if (m_app == null) return;
+		if (m_app.IsBusy()) return;
+
 		var filename = Utils.SaveFile.WithFilters(this, "*." + m_app.FileExtension);
 		if (filename == null) return;
 		if (!filename.EndsWith("." + m_app.FileExtension)) filename += "." + m_app.FileExtension;

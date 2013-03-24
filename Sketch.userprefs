@@ -1,24 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Objects/Frame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Windows/SketchWindow.cs">
     <Files>
-      <File FileName="SketchToVideo/MainWindow.cs" Line="37" Column="21" />
-      <File FileName="SketchLib/Objects/Frame.cs" Line="56" Column="30" />
-      <File FileName="SketchLib/Modules/CairoFill.cs" Line="16" Column="26" />
-      <File FileName="SketchLib/Objects/FrameSequence.cs" Line="43" Column="113" />
-      <File FileName="SketchLib/todo.txt" Line="7" Column="45" />
-      <File FileName="SketchLib/Application/App.cs" Line="143" Column="15" />
-      <File FileName="SketchLib/Modules/CairoFrame.cs" Line="4" Column="17" />
+      <File FileName="SketchLib/todo.txt" Line="7" Column="2" />
+      <File FileName="SketchToVideo/Modules/VideoFormats.cs" Line="21" Column="21" />
+      <File FileName="SketchToVideo/Modules/FFMPEG.cs" Line="10" Column="70" />
+      <File FileName="SketchLib/Objects/FrameSequence.cs" Line="43" Column="97" />
+      <File FileName="SketchLib/Objects/Frame.cs" Line="55" Column="50" />
+      <File FileName="SketchLib/Application/App.cs" Line="19" Column="32" />
+      <File FileName="SketchLib/Controls/SketchControl.cs" Line="99" Column="23" />
+      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="185" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SketchLib" expanded="True" selected="True">
+          <Node name="SketchLib" expanded="True">
             <Node name="Application" expanded="True" />
-            <Node name="Modules" expanded="True" />
+            <Node name="Controls" expanded="True" />
             <Node name="Objects" expanded="True" />
+            <Node name="Windows" expanded="True">
+              <Node name="SketchWindow.cs" selected="True" />
+            </Node>
           </Node>
-          <Node name="SketchToVideo" expanded="True" />
+          <Node name="SketchToVideo" expanded="True">
+            <Node name="Modules" expanded="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">

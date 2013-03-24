@@ -4,6 +4,7 @@
 
 24.03.2013
 
+*BUG: When using a tablet.
 *Convert PNG to mp4.
 *Move drawing code of Frame to module.
 

@@ -52,6 +52,7 @@ namespace Sketch
 		public void RenderToSurface(Cairo.ImageSurface surface) {
 			using (var context = new Cairo.Context(surface)) {
 				CairoFill.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
+				context.Antialias = Cairo.Antialias.Subpixel;
 				context.Color = new Cairo.Color(0, 0, 0);
 				CairoFrame.Draw(context, this);
 			}
