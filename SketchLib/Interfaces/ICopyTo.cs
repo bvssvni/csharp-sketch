@@ -1,6 +1,6 @@
 using System;
 
-namespace GenericInterface.Memory
+namespace Sketch
 {
 	/// <summary>
 	/// When implementing this interface,

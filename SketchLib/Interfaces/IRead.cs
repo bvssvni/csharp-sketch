@@ -1,6 +1,6 @@
 using System;
 
-namespace GenericInterface.Memory
+namespace Sketch
 {
 	public interface IRead<T>
 	{

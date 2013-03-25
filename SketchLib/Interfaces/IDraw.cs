@@ -1,6 +1,6 @@
 using System;
 
-namespace GenericInterface.Graphics
+namespace Sketch
 {
 	public interface IDraw<T>
 	{

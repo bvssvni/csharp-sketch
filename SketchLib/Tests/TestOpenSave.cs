@@ -7,25 +7,6 @@ namespace Sketch
 	public class TestOpenSave
 	{
 		[Test()]
-		public void TestOpenSavePoint()
-		{
-			var point = new Point(1, 2);
-			var mem = new System.IO.MemoryStream();
-			var f = Obf.OpenBinaryFormat.ToMemory(mem);
-			point.Save(f);
-			var bytes = mem.ToArray();
-			f.Close();
-
-			f = Obf.OpenBinaryFormat.FromBytes(bytes);
-			var newPoint = new Point(0, 0);
-			newPoint.Read(f);
-			f.Close();
-
-			Assert.True(newPoint.X == 1);
-			Assert.True(newPoint.Y == 2);
-		}
-
-		[Test()]
 		public void TestOpenSaveStroke() {
 			var stroke = new Stroke();
 			stroke.Add(new Point(1, 2));
