@@ -3,7 +3,7 @@ using Sketch;
 
 namespace Sketch
 {
-	public class CairoFrame
+	public class CairoFrameModule
 	{
 		public static void Draw(Cairo.Context context, Frame frame) {
 			context.LineWidth = 3;

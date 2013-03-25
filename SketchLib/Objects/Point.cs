@@ -5,7 +5,12 @@ namespace Sketch
 	public class Point : 
 		ICopyTo<Point>,
 		ISave<Obf.OpenBinaryFormat>,
-		IRead<Obf.OpenBinaryFormat>
+		IRead<Obf.OpenBinaryFormat>,
+		IAdd<Point, Point>,
+		ISubtract<Point, Point>,
+		IMultiply<double, Point>,
+		IDot<Point, double>,
+		ICross<Point, double>
 	{
 		public double X;
 		public double Y;
@@ -20,6 +25,29 @@ namespace Sketch
 			obj.X = this.X;
 			obj.Y = this.Y;
 			return obj;
+		}
+
+		public Point Add(Point b)
+		{
+			return new Point(this.X + b.X, this.Y + b.Y);
+		}
+
+		public Point Subtract(Point b)
+		{
+			return new Point(this.X - b.X, this.Y - b.Y);
+		}
+
+		public Point Multiply(double b) 
+		{
+			return new Point(this.X * b, this.Y * b);
+		}
+
+		public double Dot(Point b) {
+			return this.X * b.X + this.Y * b.Y;
+		}
+
+		public double Cross(Point b) {
+			return this.X * b.Y - this.Y * b.X;
 		}
 
 		public void Save(Obf.OpenBinaryFormat w) {

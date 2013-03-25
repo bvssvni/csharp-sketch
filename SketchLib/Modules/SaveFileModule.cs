@@ -3,7 +3,7 @@ using Gtk;
 
 namespace Utils
 {
-	public class SaveFile
+	public class SaveFileModule
 	{
 		/// <summary>
 		/// Shows file chooser dialog with filters applied.

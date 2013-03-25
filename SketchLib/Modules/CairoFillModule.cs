@@ -2,7 +2,7 @@ using System;
 
 namespace Sketch
 {
-	public class CairoFill
+	public class CairoFillModule
 	{
 		public static void Fill(Cairo.Context context, Gtk.Widget widget, Cairo.Color color) {
 			context.NewPath();

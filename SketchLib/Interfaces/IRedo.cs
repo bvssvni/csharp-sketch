@@ -2,8 +2,9 @@ using System;
 
 namespace Sketch
 {
-	public interface IRedo
+	public interface IRedo<T>
 	{
+		void Redo(T app);
 	}
 }
 
