@@ -3,14 +3,14 @@ using System;
 namespace Sketch
 {
 	public class Point : 
-		ICopyTo<Point>,
-		ISave<Obf.OpenBinaryFormat>,
-		IRead<Obf.OpenBinaryFormat>,
-		IAdd<Point, Point>,
-		ISubtract<Point, Point>,
-		IMultiply<double, Point>,
-		IDot<Point, double>,
-		ICross<Point, double>
+		GenericInterface.Memory.ICopyTo<Point>,
+		GenericInterface.Memory.ISave<Obf.OpenBinaryFormat>,
+		GenericInterface.Memory.IRead<Obf.OpenBinaryFormat>,
+		GenericInterface.Algebra.IAdd<Point, Point>,
+		GenericInterface.Algebra.ISubtract<Point, Point>,
+		GenericInterface.Algebra.IMultiply<double, Point>,
+		GenericInterface.Algebra.IDot<Point, double>,
+		GenericInterface.Algebra.ICross<Point, double>
 	{
 		public double X;
 		public double Y;

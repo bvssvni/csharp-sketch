@@ -4,8 +4,8 @@ using System.Collections.Generic;
 namespace Sketch
 {
 	public class FrameData :
-		IRead<Obf.OpenBinaryFormat>,
-		ISave<Obf.OpenBinaryFormat>
+		GenericInterface.Memory.IRead<Obf.OpenBinaryFormat>,
+		GenericInterface.Memory.ISave<Obf.OpenBinaryFormat>
 	{
 		public List<Frame> Frames;
 

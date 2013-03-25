@@ -6,8 +6,8 @@ namespace Sketch
 {
 	public class Stroke : 
 		List<Point>,
-		ICopyTo<Stroke>,
-		IDraw<Cairo.Context>
+		GenericInterface.Memory.ICopyTo<Stroke>,
+		GenericInterface.Graphics.IDraw<Cairo.Context>
 	{
 		public Stroke ()
 		{

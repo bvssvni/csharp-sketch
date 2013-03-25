@@ -1,30 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Windows/SketchWindow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Objects/Point.cs">
     <Files>
-      <File FileName="SketchLib/todo.txt" Line="7" Column="2" />
-      <File FileName="SketchToVideo/Modules/VideoFormats.cs" Line="21" Column="21" />
-      <File FileName="SketchToVideo/Modules/FFMPEG.cs" Line="10" Column="70" />
-      <File FileName="SketchLib/Objects/FrameSequence.cs" Line="43" Column="97" />
-      <File FileName="SketchLib/Objects/Frame.cs" Line="55" Column="50" />
-      <File FileName="SketchLib/Application/App.cs" Line="19" Column="32" />
-      <File FileName="SketchLib/Controls/SketchControl.cs" Line="99" Column="23" />
-      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="185" Column="3" />
+      <File FileName="SketchLib/todo.txt" Line="6" Column="1" />
+      <File FileName="SketchLib/Application/App.cs" Line="24" Column="3" />
+      <File FileName="SketchLib/Objects/History.cs" Line="117" Column="5" />
+      <File FileName="SketchLib/Objects/Point.cs" Line="5" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SketchLib" expanded="True">
-            <Node name="Application" expanded="True" />
-            <Node name="Controls" expanded="True" />
-            <Node name="Objects" expanded="True" />
-            <Node name="Windows" expanded="True">
-              <Node name="SketchWindow.cs" selected="True" />
-            </Node>
-          </Node>
-          <Node name="SketchToVideo" expanded="True">
-            <Node name="Modules" expanded="True" />
-          </Node>
+          <Node name="GenericInterfaceLib" expanded="True" selected="True" />
+          <Node name="SketchLib" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

@@ -1,6 +1,6 @@
 using System;
 
-namespace Sketch
+namespace GenericInterface.Algebra
 {
 	public interface ISubtract<Argument, Return>
 	{
