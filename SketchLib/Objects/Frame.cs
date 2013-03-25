@@ -3,7 +3,12 @@ using System.Collections.Generic;
 
 namespace Sketch
 {
-	public class Frame
+	public class Frame :
+		IDraw<Cairo.Context>,
+		IDraw<Cairo.ImageSurface>,
+		ICopyTo<Frame>,
+		IRead<Obf.OpenBinaryFormat>,
+		ISave<Obf.OpenBinaryFormat>
 	{
 		public List<Stroke> Strokes;
 
@@ -16,14 +21,22 @@ namespace Sketch
 			CairoFrame.Draw(context, this);
 		}
 
-		public Frame Copy() {
-			var frame = new Frame();
+		public void Draw(Cairo.ImageSurface surface) {
+			using (var context = new Cairo.Context(surface)) {
+				CairoFill.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
+				context.Antialias = Cairo.Antialias.Subpixel;
+				context.Color = new Cairo.Color(0, 0, 0);
+				CairoFrame.Draw(context, this);
+			}
+		}
+
+		public Frame CopyTo(Frame obj) {
 			var n = Strokes.Count;
 			for (var i = 0; i < n; i++) {
-				frame.Strokes.Add(Strokes[i].Copy());
+				obj.Strokes.Add(Strokes[i].CopyTo(new Stroke()));
 			}
 
-			return frame;
+			return obj;
 		}
 
 		public void Save(Obf.OpenBinaryFormat w) {
@@ -49,14 +62,6 @@ namespace Sketch
 			r.EndBlock(frame);
 		}
 
-		public void RenderToSurface(Cairo.ImageSurface surface) {
-			using (var context = new Cairo.Context(surface)) {
-				CairoFill.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
-				context.Antialias = Cairo.Antialias.Subpixel;
-				context.Color = new Cairo.Color(0, 0, 0);
-				CairoFrame.Draw(context, this);
-			}
-		}
 	}
 }
 

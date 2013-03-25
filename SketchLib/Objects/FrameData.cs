@@ -3,11 +3,13 @@ using System.Collections.Generic;
 
 namespace Sketch
 {
-	public class FrameSequence
+	public class FrameData :
+		IRead<Obf.OpenBinaryFormat>,
+		ISave<Obf.OpenBinaryFormat>
 	{
 		public List<Frame> Frames;
 
-		public FrameSequence ()
+		public FrameData ()
 		{
 			Frames = new List<Frame>();
 		}
@@ -41,7 +43,7 @@ namespace Sketch
 			for (int i = 0; i < n; i++) {
 				var frame = this.Frames[i];
 				string filename = directory + System.IO.Path.DirectorySeparatorChar + i.ToString().PadLeft(6, '0') + ".png";
-				frame.RenderToSurface(surface);
+				frame.Draw(surface);
 				surface.WriteToPng(filename);
 			}
 		}

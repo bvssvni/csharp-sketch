@@ -49,7 +49,7 @@ namespace Sketch
 		[Test()]
 		public void TestOpenSaveFrameData()
 		{
-			var frameData = new FrameSequence();
+			var frameData = new FrameData();
 			var frame = new Frame();
 			frameData.Frames.Add(frame);
 			var stroke = new Stroke();
@@ -66,7 +66,7 @@ namespace Sketch
 
 			f = Obf.OpenBinaryFormat.FromBytes(bytes);
 
-			var newFrameData = new FrameSequence();
+			var newFrameData = new FrameData();
 			newFrameData.Read(f);
 
 			f.Close();

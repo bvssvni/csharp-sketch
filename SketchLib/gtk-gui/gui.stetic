@@ -225,7 +225,7 @@
             <property name="MemberName" />
             <property name="ShowArrow">False</property>
             <property name="IconSize">LargeToolbar</property>
-            <node name="__gtksharp_140_Stetic_Editor_ActionToolbar" type="Toolbar">
+            <node name="toolbar2" type="Toolbar">
               <node type="Toolitem" action="newAction" />
               <node type="Toolitem" action="openAction" />
               <node type="Toolitem" action="saveAction" />

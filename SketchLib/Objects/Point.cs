@@ -2,7 +2,10 @@ using System;
 
 namespace Sketch
 {
-	public class Point
+	public class Point : 
+		ICopyTo<Point>,
+		ISave<Obf.OpenBinaryFormat>,
+		IRead<Obf.OpenBinaryFormat>
 	{
 		public double X;
 		public double Y;
@@ -13,8 +16,10 @@ namespace Sketch
 			this.Y = y;
 		}
 
-		public Point Copy() {
-			return new Point(this.X, this.Y);
+		public Point CopyTo(Point obj) {
+			obj.X = this.X;
+			obj.Y = this.Y;
+			return obj;
 		}
 
 		public void Save(Obf.OpenBinaryFormat w) {

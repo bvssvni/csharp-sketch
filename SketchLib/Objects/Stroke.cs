@@ -4,7 +4,10 @@ using Cairo;
 
 namespace Sketch
 {
-	public class Stroke : List<Point>
+	public class Stroke : 
+		List<Point>,
+		ICopyTo<Stroke>,
+		IDraw<Cairo.Context>
 	{
 		public Stroke ()
 		{
@@ -21,14 +24,13 @@ namespace Sketch
 			context.Stroke();
 		}
 
-		public Stroke Copy() {
-			var stroke = new Stroke();
+		public Stroke CopyTo(Stroke obj) {
 			var n = this.Count;
 			for (int i = 0; i < n; i++) {
-				stroke.Add(this[i].Copy());
+				obj.Add(this[i].CopyTo(new Point(0, 0)));
 			}
 
-			return stroke;
+			return obj;
 		}
 
 		public void Save(Obf.OpenBinaryFormat w) {

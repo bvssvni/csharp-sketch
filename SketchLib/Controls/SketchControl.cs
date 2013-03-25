@@ -134,10 +134,10 @@ namespace Sketch
 				context.Antialias = Cairo.Antialias.Subpixel;
 
 				if (m_preview == 0) {
-					m_app.DrawSelectedFrame(context);
+					m_app.Draw(context);
 				} else {
-					var n = m_app.FrameData.Frames.Count;
-					var frame = m_app.FrameData.Frames[m_previewFrame % n];
+					var n = m_app.Data.Frames.Count;
+					var frame = m_app.Data.Frames[m_previewFrame % n];
 					context.Color = new Cairo.Color(0, 0, 0);
 					frame.Draw(context);
 				}

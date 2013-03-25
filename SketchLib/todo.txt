@@ -2,6 +2,10 @@
 + Completed on later day.
 - Decided against on later day.
 
+25.03.2013
+
+*Add generic interfaces.
+
 24.03.2013
 
 *BUG: When using a tablet.

@@ -29,7 +29,7 @@ namespace Sketch
 			}
 
 			public void Undo(App app) {
-				app.FrameData.Frames.RemoveAt(NewFrameIndex);
+				app.Data.Frames.RemoveAt(NewFrameIndex);
 				app.SelectedFrame = OldFrameIndex;
 
 				app.RefreshGraphics();
@@ -37,7 +37,7 @@ namespace Sketch
 			}
 
 			public void Redo(App app) {
-				app.FrameData.Frames.Insert(NewFrameIndex, new Frame());
+				app.Data.Frames.Insert(NewFrameIndex, new Frame());
 				app.SelectedFrame = NewFrameIndex;
 
 				app.RefreshGraphics();
@@ -57,7 +57,8 @@ namespace Sketch
 			}
 
 			public void Undo(App app) {
-				app.FrameData.Frames.Insert(OldFrameIndex, Frame.Copy());
+				var frameCopy = Frame.CopyTo(new Frame());
+				app.Data.Frames.Insert(OldFrameIndex, frameCopy);
 				app.SelectedFrame = OldFrameIndex;
 
 				app.RefreshGraphics();
@@ -65,7 +66,7 @@ namespace Sketch
 			}
 
 			public void Redo(App app) {
-				app.FrameData.Frames.RemoveAt(OldFrameIndex);
+				app.Data.Frames.RemoveAt(OldFrameIndex);
 				app.SelectedFrame = NewFrameIndex;
 
 				app.RefreshGraphics();
@@ -86,7 +87,7 @@ namespace Sketch
 			}
 
 			public void Undo(App app) {
-				app.FrameData.Frames[FrameIndex].Strokes.RemoveAt(StrokeIndex);
+				app.Data.Frames[FrameIndex].Strokes.RemoveAt(StrokeIndex);
 				app.SelectedFrame = FrameIndex;
 
 				app.RefreshTitle();
@@ -94,7 +95,8 @@ namespace Sketch
 			}
 
 			public void Redo(App app) {
-				app.FrameData.Frames[FrameIndex].Strokes.Insert(StrokeIndex, Stroke.Copy());
+				var strokeCopy = Stroke.CopyTo(new Stroke());
+				app.Data.Frames[FrameIndex].Strokes.Insert(StrokeIndex, strokeCopy);
 				app.SelectedFrame = FrameIndex;
 
 				app.RefreshTitle();
@@ -122,10 +124,11 @@ namespace Sketch
 
 		public void AddStroke(App app) {
 			int frameIndex = app.SelectedFrame;
-			var frame = app.FrameData.Frames[frameIndex];
+			var frame = app.Data.Frames[frameIndex];
 			int strokeIndex = frame.Strokes.Count-1;
 			Stroke stroke = frame.Strokes[strokeIndex];
-			AddUndoAction(new AddStrokeUndoAction(frameIndex, strokeIndex, stroke.Copy()));
+			var strokeCopy = stroke.CopyTo(new Stroke());
+			AddUndoAction(new AddStrokeUndoAction(frameIndex, strokeIndex, strokeCopy));
 		}
 
 		public void AddFrame(int oldFrameIndex, int newFrameIndex) {
@@ -133,7 +136,8 @@ namespace Sketch
 		}
 
 		public void RemoveFrame(int oldFrameIndex, int newFrameIndex, Frame frame) {
-			AddUndoAction(new RemoveFrameUndoAction(oldFrameIndex, newFrameIndex, frame.Copy()));
+			var frameCopy = frame.CopyTo(new Frame());
+			AddUndoAction(new RemoveFrameUndoAction(oldFrameIndex, newFrameIndex, frameCopy));
 		}
 
 		public void AddUndoAction(IUndoAction action) {
