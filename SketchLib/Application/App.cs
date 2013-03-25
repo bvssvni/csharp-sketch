@@ -5,7 +5,9 @@ namespace Sketch
 	public class App :
 		IDraw<Cairo.Context>,
 		IRead<string>,
-		ISave<string>
+		ISave<string>,
+		IUI<UI>,
+		IDo<SketchAdvisor>
 	{
 		public FrameData Data;
 		private int m_selectedFrame;
@@ -14,12 +16,28 @@ namespace Sketch
 
 		private History m_history;
 
-		public delegate void RefreshDelegate();
+		public delegate void RefreshDelegate(UI ui);
 		public delegate bool IsBusyDelegate();
 
-		public RefreshDelegate RefreshGraphics;
+		public RefreshDelegate Refresh;
 		public RefreshDelegate RefreshTitle;
 		public IsBusyDelegate IsBusy;
+
+		public void RefreshUI(UI ui) {
+			Refresh(ui);
+		}
+
+		public void Do(SketchAdvisor advisor) {
+			if (advisor.ShouldDeleteSelectedFrame()) SelectedFrameAction.Delete(this);
+			if (advisor.ShouldGotoLastFrame()) SelectedFrameAction.GotoLast(this);
+			if (advisor.ShouldGotoFirstFrame()) SelectedFrameAction.GotoFirst(this);
+			if (advisor.ShouldGotoPreviousFrame()) SelectedFrameAction.GotoPrevious(this);
+			if (advisor.ShouldGotoNextFrame()) SelectedFrameAction.GotoNext(this);
+			if (advisor.ShouldAddNewFrame()) SelectedFrameAction.AddNewFrame(this);
+			if (advisor.ShouldClose()) ClosingAction.Close(this);
+			if (advisor.ShouldRefreshTitle()) Refresh(UI.Title);
+			if (advisor.ShouldRefreshGraphics()) Refresh(UI.Graphics);
+		}
 
 		public History History {
 			get {
@@ -79,52 +97,6 @@ namespace Sketch
 			}
 		}
 		
-		public bool HasNextFrame {
-			get {
-				if (SelectedFrame == Data.Frames.Count-1) return false;
-				
-				return true;
-			}
-		}
-		
-		public bool HasPreviousFrame {
-			get {
-				if (SelectedFrame == 0) return false;
-				
-				return true;
-			}
-		}
-		
-		public bool HasMoreThanOneFrame {
-			get {
-				if (Data.Frames.Count < 2) return false;
-				
-				return true;
-			}
-		}
-		
-		public void NavigateToLastFrame() {
-			this.SelectedFrame = this.Data.Frames.Count-1;
-		}
-		
-		public void NavigateToFirstFrame() {
-			this.SelectedFrame = 0;
-		}
-		
-		public void RemoveSelectedFrame() {
-			if (this.Data.Frames.Count <= 1) return;
-			
-			var frame = this.Data.Frames[this.SelectedFrame];
-			var oldFrameIndex = this.SelectedFrame;
-			this.Data.Frames.RemoveAt(this.SelectedFrame);
-			if (this.SelectedFrame >= this.Data.Frames.Count) {
-				this.SelectedFrame = this.Data.Frames.Count-1;
-			}
-			
-			var newFrameIndex = this.SelectedFrame;
-			History.RemoveFrame(oldFrameIndex, newFrameIndex, frame);
-		}
-		
 		public void BeginStroke(Stroke stroke) {
 			Data.Frames[SelectedFrame].Strokes.Add(stroke);
 		}
@@ -134,15 +106,6 @@ namespace Sketch
 			if (frame.Strokes.Count == 0) return;
 			
 			History.AddStroke(this);
-		}
-		
-		public void AddNewFrame() {
-			int oldFrameIndex = SelectedFrame;
-			Data.Frames.Insert(this.SelectedFrame + 1, new Frame());
-			SelectedFrame++;
-			int newFrameIndex = SelectedFrame;
-			
-			History.AddFrame(oldFrameIndex, newFrameIndex);
 		}
 		
 		public Stroke LastStroke() {

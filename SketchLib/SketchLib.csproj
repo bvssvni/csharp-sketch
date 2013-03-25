@@ -70,6 +70,14 @@
     <Compile Include="Interfaces\ISaveVersion.cs" />
     <Compile Include="Modules\FileExtensionModule.cs" />
     <Compile Include="Modules\SketchSaveModule.cs" />
+    <Compile Include="Modules\FrameNavigationModule.cs" />
+    <Compile Include="Advisors\SketchAdvisor.cs" />
+    <Compile Include="Application\Act.cs" />
+    <Compile Include="Interfaces\IDo.cs" />
+    <Compile Include="Application\UI.cs" />
+    <Compile Include="Interfaces\IUI.cs" />
+    <Compile Include="Actions\SelectedFrameAction.cs" />
+    <Compile Include="Actions\ClosingAction.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -83,5 +91,7 @@
   <ItemGroup>
     <Folder Include="Windows\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Advisors\" />
+    <Folder Include="Actions\" />
   </ItemGroup>
 </Project>

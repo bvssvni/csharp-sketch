@@ -96,8 +96,8 @@ namespace Sketch
 				m_app.EndStroke();
 				mousedown = false;
 
-				m_app.RefreshTitle();
-				m_app.RefreshGraphics();
+				m_app.RefreshUI(UI.Title);
+				m_app.RefreshUI(UI.Graphics);
 			};
 			this.MotionNotifyEvent += delegate(object o, Gtk.MotionNotifyEventArgs args) {
 				if (m_app.IsBusy()) return;
@@ -113,7 +113,7 @@ namespace Sketch
 
 					lastStroke.Add(new Point(args.Event.X, args.Event.Y));
 
-					RefreshGraphics();
+					m_app.RefreshUI(UI.Graphics);
 				}
 			};
 			

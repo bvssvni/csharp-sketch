@@ -11,13 +11,19 @@ public partial class SketchWindow: Gtk.Window
 		Build ();
 
 		m_app = new App();
-		m_app.RefreshTitle = this.RefreshTitle;
-		m_app.RefreshGraphics = sketchcontrol1.RefreshGraphics;
+		m_app.Refresh = this.Refresh;
 		m_app.IsBusy = sketchcontrol1.IsBusy;
 
 		sketchcontrol1.App = m_app;
 
-		m_app.RefreshTitle();
+		m_app.RefreshUI(UI.Title);
+	}
+
+	public void Refresh(UI ui) {
+		switch (ui) {
+			case UI.Title: RefreshTitle(); break;
+			case UI.Graphics: sketchcontrol1.RefreshGraphics(); break;
+		}
 	}
 
 	public void RefreshTitle() {
@@ -31,81 +37,52 @@ public partial class SketchWindow: Gtk.Window
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) {
-			a.RetVal = true;
-			return;
-		}
+		var advisor = new SketchAdvisor(m_app);
+		advisor.Closing = true;
+		if (!advisor.ShouldClose()) a.RetVal = true;
 
-		Application.Quit ();
+		m_app.Do(advisor);
 	}
 	protected void OnAddActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-		
-		m_app.AddNewFrame();
-		
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.AddNewFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnGoForwardActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (!m_app.HasNextFrame) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.SelectedFrame++;
-
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.GotoNextFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnGoBackActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (!m_app.HasPreviousFrame) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.SelectedFrame--;
-
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.GotoPreviousFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnGotoFirstActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.NavigateToFirstFrame();
-
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.GotoFirstFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnGotoLastActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.NavigateToLastFrame();
-
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.GotoLastFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnRemoveActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (!m_app.HasMoreThanOneFrame) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.RemoveSelectedFrame();
-
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		var advisor = new SketchAdvisor(m_app);
+		advisor.DeleteSelectedFrame = true;
+		m_app.Do(advisor);
 	}
 
 	protected void OnMediaPlayActionActivated (object sender, EventArgs e)
@@ -145,7 +122,7 @@ public partial class SketchWindow: Gtk.Window
 		var window = this;
 		DocumentModule.Save(window, m_app.FileExtensions, m_app.FileName, m_app);
 
-		m_app.RefreshTitle();
+		m_app.RefreshUI(UI.Title);
 	}
 
 	protected void OnOpenActionActivated (object sender, EventArgs e)
@@ -156,8 +133,8 @@ public partial class SketchWindow: Gtk.Window
 		var window = this;
 		DocumentModule.Open(window, m_app.FileExtensions, m_app);
 
-		m_app.RefreshTitle();
-		m_app.RefreshGraphics();
+		m_app.RefreshUI(UI.Title);
+		m_app.RefreshUI(UI.Graphics);
 	}
 
 	protected void OnNewActionActivated(object sender, EventArgs e)
@@ -177,6 +154,6 @@ public partial class SketchWindow: Gtk.Window
 		var window = this;
 		DocumentModule.SaveAs(window, m_app.FileExtensions, m_app);
 
-		m_app.RefreshTitle();
+		m_app.RefreshUI(UI.Title);
 	}
 }
