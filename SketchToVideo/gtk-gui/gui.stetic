@@ -5,6 +5,7 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../../SketchLib/bin/Debug/SketchLib.dll" />
     <widget-library name="../bin/Debug/SketchToVideo.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
@@ -62,7 +63,7 @@
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Start</property>
                 <property name="UseUnderline">True</property>
-                <signal name="Activated" handler="OnExportButtonActivated" />
+                <signal name="Clicked" handler="OnExportButtonClicked" />
               </widget>
               <packing>
                 <property name="Position">2</property>

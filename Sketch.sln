@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SketchToVideo", "SketchToVi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SketchLib", "SketchLib\SketchLib.csproj", "{B6CFE1CD-C63A-4528-805B-F7BA24B04958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericInterfaceLib", "GenericInterfaceLib\GenericInterfaceLib.csproj", "{84D23300-868D-4694-A216-DC03A2F28B5B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -23,10 +21,6 @@ Global
 		{68596375-0A09-4B37-B4AB-807530F84FA9}.Debug|x86.Build.0 = Debug|x86
 		{68596375-0A09-4B37-B4AB-807530F84FA9}.Release|x86.ActiveCfg = Release|x86
 		{68596375-0A09-4B37-B4AB-807530F84FA9}.Release|x86.Build.0 = Release|x86
-		{84D23300-868D-4694-A216-DC03A2F28B5B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{84D23300-868D-4694-A216-DC03A2F28B5B}.Debug|x86.Build.0 = Debug|Any CPU
-		{84D23300-868D-4694-A216-DC03A2F28B5B}.Release|x86.ActiveCfg = Release|Any CPU
-		{84D23300-868D-4694-A216-DC03A2F28B5B}.Release|x86.Build.0 = Release|Any CPU
 		{B6CFE1CD-C63A-4528-805B-F7BA24B04958}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B6CFE1CD-C63A-4528-805B-F7BA24B04958}.Debug|x86.Build.0 = Debug|Any CPU
 		{B6CFE1CD-C63A-4528-805B-F7BA24B04958}.Release|x86.ActiveCfg = Release|Any CPU

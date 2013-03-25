@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B6CFE1CD-C63A-4528-805B-F7BA24B04958}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SketchLib</RootNamespace>
+    <RootNamespace>Sketch</RootNamespace>
     <AssemblyName>SketchLib</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,24 +40,48 @@
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Modules\CairoFill.cs" />
-    <Compile Include="Modules\OpenFile.cs" />
-    <Compile Include="Modules\SaveFile.cs" />
     <Compile Include="Objects\Frame.cs" />
     <Compile Include="Objects\Stroke.cs" />
     <Compile Include="Objects\Point.cs" />
-    <Compile Include="Objects\FrameSequence.cs" />
     <Compile Include="Objects\History.cs" />
     <Compile Include="Objects\OpenBinaryFormat.cs" />
     <Compile Include="Application\App.cs" />
     <Compile Include="Tests\TestOpenSave.cs" />
+    <Compile Include="Controls\SketchControl.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="gtk-gui\SketchWindow.cs" />
+    <Compile Include="Windows\SketchWindow.cs" />
+    <Compile Include="Objects\FrameData.cs" />
+    <Compile Include="Modules\DocumentModule.cs" />
+    <Compile Include="Modules\OpenFileModule.cs" />
+    <Compile Include="Modules\SaveFileModule.cs" />
+    <Compile Include="Modules\CairoFrameModule.cs" />
+    <Compile Include="Modules\CairoFillModule.cs" />
+    <Compile Include="Interfaces\ICopyTo.cs" />
+    <Compile Include="Interfaces\IRead.cs" />
+    <Compile Include="Interfaces\IRedo.cs" />
+    <Compile Include="Interfaces\ISave.cs" />
+    <Compile Include="Interfaces\IUndo.cs" />
+    <Compile Include="Interfaces\IDraw.cs" />
+    <Compile Include="Interfaces\ISaveVersion.cs" />
+    <Compile Include="Modules\FileExtensionModule.cs" />
+    <Compile Include="Modules\SketchSaveModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 
 namespace Sketch
 {
-	public interface IUndoAction
+	public interface IUndoAction :
+		IUndo<App>,
+		IRedo<App>,
+		IDisposable
 	{
-		void Undo(App app);
-		void Redo(App app);
 	}
 
 	public class History : List<IUndoAction>
@@ -43,6 +44,10 @@ namespace Sketch
 				app.RefreshGraphics();
 				app.RefreshTitle();
 			}
+
+			public void Dispose() {
+
+			}
 		}
 
 		private class RemoveFrameUndoAction : IUndoAction {
@@ -71,6 +76,10 @@ namespace Sketch
 
 				app.RefreshGraphics();
 				app.RefreshTitle();
+			}
+
+			public void Dispose() {
+
 			}
 		}
 
@@ -101,6 +110,10 @@ namespace Sketch
 
 				app.RefreshTitle();
 				app.RefreshGraphics();
+			}
+
+			public void Dispose() {
+
 			}
 		}
 

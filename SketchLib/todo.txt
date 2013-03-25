@@ -4,6 +4,8 @@
 
 25.03.2013
 
+*Add custom block for Stroke.
+*Add gzip compression.
 *Add generic interfaces.
 
 24.03.2013

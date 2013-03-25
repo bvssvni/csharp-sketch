@@ -4,10 +4,11 @@ using System.Collections.Generic;
 namespace Sketch
 {
 	public class FrameData :
-		GenericInterface.Memory.IRead<Obf.OpenBinaryFormat>,
-		GenericInterface.Memory.ISave<Obf.OpenBinaryFormat>
+		IRead<Obf.OpenBinaryFormat>,
+		ISave<Obf.OpenBinaryFormat>
 	{
 		public List<Frame> Frames;
+		public int CurrentVersion = 1;
 
 		public FrameData ()
 		{
@@ -19,7 +20,7 @@ namespace Sketch
 			var n = Frames.Count;
 			w.WriteInt("FramesLength", n);
 			for (var i = 0; i < n; i++) {
-				Frames[i].Save(w);
+				Frames[i].Save(w, CurrentVersion);
 			}
 
 			w.EndBlock(frameSequence);
@@ -27,7 +28,7 @@ namespace Sketch
 
 		public void Read(Obf.OpenBinaryFormat r) {
 			var frameSequence = r.StartBlock("FrameSequence");
-			var n = r.Read<int>("FramesLength", 0, frameSequence);
+			var n = r.Seek<int>("FramesLength", 0, frameSequence);
 			for (var i = 0; i < n; i++) {
 				var frame = new Frame();
 				frame.Read(r);

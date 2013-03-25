@@ -5,15 +5,12 @@ namespace Sketch
 	public class App :
 		IDraw<Cairo.Context>,
 		IRead<string>,
-		ISave<string>,
-		IHaveSelectedFrame,
-		IHaveFileName,
-		IHaveHistory
+		ISave<string>
 	{
 		public FrameData Data;
 		private int m_selectedFrame;
 		private string m_fileName;
-		private string m_fileExtension = "obf";
+		private string[] m_fileExtensions = new string[]{".obf.gz", ".obf"};
 
 		private History m_history;
 
@@ -33,12 +30,12 @@ namespace Sketch
 			}
 		}
 
-		public string FileExtension {
+		public string[] FileExtensions {
 			get {
-				return m_fileExtension;
+				return m_fileExtensions;
 			}
 			set {
-				m_fileExtension = value;
+				m_fileExtensions = value;
 			}
 		}
 
@@ -198,7 +195,7 @@ namespace Sketch
 		
 		public void Read(string filename) {
 			Obf.OpenBinaryFormat r = Obf.OpenBinaryFormat.FromFile(filename);
-			var sketchDocument = r.StartBlock("SketchDocument");
+			var sketchDocument = r.SeekBlock("SketchDocument");
 			var frameData = new FrameData();
 			frameData.Read(r);
 			r.EndBlock(sketchDocument);

@@ -23,7 +23,7 @@ public partial class SketchWindow: Gtk.Window
 	public void RefreshTitle() {
 		var filename = m_app.FileName;
 		if (filename == null) filename = "untitled";
-		else filename = System.IO.Path.GetFileNameWithoutExtension(filename);
+		else filename = System.IO.Path.GetFileName(filename);
 		if (m_app.History.Cursor > 0) filename += "*";
 
 		this.Title = "Sketch - " + filename + " (" + m_app.SelectedFrame.ToString() + ")";
@@ -142,12 +142,8 @@ public partial class SketchWindow: Gtk.Window
 		if (m_app == null) return;
 		if (m_app.IsBusy()) return;
 
-		var filename = m_app.FileName;
-		if (filename == null) filename = Utils.SaveFile.WithFilters(this, "*." + m_app.FileExtension);
-		if (filename == null) return;
-		if (!filename.EndsWith("." + m_app.FileExtension)) filename += "." + m_app.FileExtension;
-
-		m_app.Save(filename);
+		var window = this;
+		DocumentModule.Save(window, m_app.FileExtensions, m_app.FileName, m_app);
 
 		m_app.RefreshTitle();
 	}
@@ -157,10 +153,8 @@ public partial class SketchWindow: Gtk.Window
 		if (m_app == null) return;
 		if (m_app.IsBusy()) return;
 
-		var filename = Utils.OpenFile.WithFilters(this, "*." + m_app.FileExtension);
-		if (filename == null) return;
-
-		m_app.Read(filename);
+		var window = this;
+		DocumentModule.Open(window, m_app.FileExtensions, m_app);
 
 		m_app.RefreshTitle();
 		m_app.RefreshGraphics();
@@ -180,11 +174,8 @@ public partial class SketchWindow: Gtk.Window
 		if (m_app == null) return;
 		if (m_app.IsBusy()) return;
 
-		var filename = Utils.SaveFile.WithFilters(this, "*." + m_app.FileExtension);
-		if (filename == null) return;
-		if (!filename.EndsWith("." + m_app.FileExtension)) filename += "." + m_app.FileExtension;
-		
-		m_app.Save(filename);
+		var window = this;
+		DocumentModule.SaveAs(window, m_app.FileExtensions, m_app);
 
 		m_app.RefreshTitle();
 	}

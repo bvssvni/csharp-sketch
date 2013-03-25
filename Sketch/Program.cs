@@ -8,7 +8,7 @@ namespace Sketch
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			MainWindow win = new MainWindow ();
+			SketchWindow win = new SketchWindow ();
 			win.Show ();
 			Application.Run ();
 		}

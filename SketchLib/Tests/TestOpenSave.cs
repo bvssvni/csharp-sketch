@@ -13,7 +13,7 @@ namespace Sketch
 			stroke.Add(new Point(3, 4));
 			var mem = new System.IO.MemoryStream();
 			var f = Obf.OpenBinaryFormat.ToMemory(mem);
-			stroke.Save(f);
+			stroke.Save(f, 1);
 			var bytes = mem.ToArray();
 			f.Close();
 
