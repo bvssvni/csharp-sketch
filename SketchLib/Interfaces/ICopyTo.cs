@@ -6,9 +6,9 @@ namespace GenericInterface.Memory
 	/// When implementing this interface,
 	/// remember to return the object copied to.
 	/// </summary>
-	public interface ICopyTo<T>
+	public interface ICopyTo<Argument>
 	{
-		T CopyTo(T obj);
+		Argument CopyTo(Argument obj);
 	}
 }
 
