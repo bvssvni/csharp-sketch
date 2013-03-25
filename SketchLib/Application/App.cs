@@ -5,14 +5,17 @@ namespace Sketch
 	public class App :
 		IDraw<Cairo.Context>,
 		IRead<string>,
-		ISave<string>
+		ISave<string>,
+		IHaveSelectedFrame,
+		IHaveFileName,
+		IHaveHistory
 	{
 		public FrameData Data;
-		public int SelectedFrame;
-		public string FileName;
-		public string FileExtension = "obf";
+		private int m_selectedFrame;
+		private string m_fileName;
+		private string m_fileExtension = "obf";
 
-		public History History;
+		private History m_history;
 
 		public delegate void RefreshDelegate();
 		public delegate bool IsBusyDelegate();
@@ -20,6 +23,42 @@ namespace Sketch
 		public RefreshDelegate RefreshGraphics;
 		public RefreshDelegate RefreshTitle;
 		public IsBusyDelegate IsBusy;
+
+		public History History {
+			get {
+				return m_history;
+			}
+			set {
+				m_history = value;
+			}
+		}
+
+		public string FileExtension {
+			get {
+				return m_fileExtension;
+			}
+			set {
+				m_fileExtension = value;
+			}
+		}
+
+		public string FileName {
+			get {
+				return m_fileName;
+			}
+			set {
+				m_fileName = value;
+			}
+		}
+
+		public int SelectedFrame {
+			get {
+				return m_selectedFrame;
+			}
+			set {
+				m_selectedFrame = value;
+			}
+		}
 
 		public App ()
 		{
