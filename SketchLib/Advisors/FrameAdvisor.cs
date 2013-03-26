@@ -12,7 +12,9 @@ namespace Sketch
 		public bool GotoPreviousFrame;
 		public bool GotoNextFrame;
 		public bool AddNewFrame;
-		public bool Closing;
+		public bool Loading;
+		public bool StartPreview;
+		public bool StopPreview;
 
 		public SketchAdvisor(App app)
 		{
@@ -62,10 +64,14 @@ namespace Sketch
 			return AddNewFrame;
 		}
 
-		public bool ShouldClose() {
+		public bool ShouldStartPreview() {
 			if (m_app.IsBusy()) return false;
 
-			return Closing;
+			return StartPreview;
+		}
+
+		public bool ShouldStopPreview() {
+			return StopPreview;
 		}
 
 		public bool ShouldRefreshTitle() {
@@ -77,7 +83,7 @@ namespace Sketch
 		public bool ShouldRefreshGraphics() {
 			if (m_app.IsBusy()) return false;
 
-			return true;
+			return !Loading;
 		}
 	}
 }
