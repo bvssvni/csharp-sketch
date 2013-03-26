@@ -64,6 +64,11 @@ namespace Sketch
 			Assert.True(p2.X == 100);
 			Assert.True(p2.Y == 100);
 		}
+
+		[Test()]
+		public void TestGenerics() {
+
+		}
 	}
 }
 

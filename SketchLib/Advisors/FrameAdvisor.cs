@@ -2,7 +2,7 @@ using System;
 
 namespace Sketch
 {
-	public class SketchAdvisor
+	public class FrameAdvisor
 	{
 		private App m_app;
 
@@ -16,7 +16,7 @@ namespace Sketch
 		public bool StartPreview;
 		public bool StopPreview;
 
-		public SketchAdvisor(App app)
+		public FrameAdvisor(App app)
 		{
 			m_app = app;
 		}
