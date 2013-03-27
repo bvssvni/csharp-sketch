@@ -1,8 +1,8 @@
 using System;
 
-namespace Sketch
+namespace Utils
 {
-	public interface ISaveVersion<T, V>
+	public interface IWriteVersion<T, V>
 	{
 		void Save(T writer, V version);
 	}

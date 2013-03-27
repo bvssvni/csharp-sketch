@@ -1,8 +1,8 @@
 using System;
 
-namespace Sketch
+namespace Utils
 {
-	public interface ISave<T>
+	public interface IWrite<T>
 	{
 		void Save(T writer);
 	}

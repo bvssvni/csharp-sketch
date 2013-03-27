@@ -1,9 +1,12 @@
 using System;
 
-namespace Sketch
+namespace Utils
 {
-	public interface IUndoAction
+	public interface IUndoAction<App> :
+		IDisposable
 	{
+		void Undo(App app);
+		void Redo(App app);
 	}
 }
 
