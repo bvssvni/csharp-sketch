@@ -7,9 +7,9 @@ namespace Sketch
 	/// Usually there is one App object per window.
 	/// </summary>
 	public class App :
-		IDraw<Cairo.Context>,
-		IRead<string>,
-		ISave<string>
+		Utils.IDraw<Cairo.Context>,
+		Utils.IRead<string>,
+		Utils.IWrite<string>
 	{
 		public enum UI
 		{
@@ -24,17 +24,8 @@ namespace Sketch
 		
 		public IsBusyDelegate IsBusy;
 		public RefreshDelegate Refresh;
-		
-		public History m_history;
-		
-		public History History {
-			get {
-				return m_history;
-			}
-			set {
-				m_history = value;
-			}
-		}
+
+		public Utils.History<App> History;
 
 		public StrokeHelper StrokeHelper;
 
@@ -48,7 +39,7 @@ namespace Sketch
 		public App ()
 		{
 			// Add history.
-			History = new History();
+			History = new Utils.History<App>();
 
 			// Add default frame.
 			Data = new FrameData();
@@ -91,7 +82,7 @@ namespace Sketch
 			Data.Save(w);
 			w.EndBlock(sketchDocument);
 			w.Close();
-			this.History = new History();
+			this.History = new Utils.History<App>();
 			this.FileName = filename;
 		}
 		
@@ -104,7 +95,7 @@ namespace Sketch
 			r.Close();
 			this.Data = frameData;
 			this.SelectedFrame = 0;
-			this.History = new History();
+			this.History = new Utils.History<App>();
 			this.FileName = filename;
 		}
 	}

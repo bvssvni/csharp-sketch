@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace Sketch
 {
 	public class Frame :
-		IDraw<Cairo.Context>,
-		IDraw<Cairo.ImageSurface>,
-		ICopyTo<Frame>,
-		IRead<Obf.OpenBinaryFormat>,
-		ISaveVersion<Obf.OpenBinaryFormat, int>
+		Utils.IDraw<Cairo.Context>,
+		Utils.IDraw<Cairo.ImageSurface>,
+		Utils.ICopyTo<Frame>,
+		Utils.IRead<Obf.OpenBinaryFormat>,
+		Utils.IWriteVersion<Obf.OpenBinaryFormat, int>
 	{
 		public List<Stroke> Strokes;
 

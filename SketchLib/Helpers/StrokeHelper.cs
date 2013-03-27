@@ -25,7 +25,12 @@ namespace Sketch
 		}
 
 		public void Step4_EndStroke(App app) {
-			app.History.AddStroke(app);
+			int frameIndex = app.SelectedFrame;
+			var frame = app.Data.Frames[frameIndex];
+			int strokeIndex = frame.Strokes.Count-1;
+			Stroke stroke = frame.Strokes[strokeIndex];
+			var strokeCopy = stroke.CopyTo(new Stroke());
+			app.History.AddUndoAction(new AddStrokeUndoAction(frameIndex, strokeIndex, strokeCopy));
 		}
 	}
 }

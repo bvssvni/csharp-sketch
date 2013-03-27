@@ -63,14 +63,9 @@
     <Compile Include="Modules\CairoFillModule.cs" />
     <Compile Include="Interfaces\ICopyTo.cs" />
     <Compile Include="Interfaces\IRead.cs" />
-    <Compile Include="Interfaces\IRedo.cs" />
-    <Compile Include="Interfaces\ISave.cs" />
-    <Compile Include="Interfaces\IUndo.cs" />
     <Compile Include="Interfaces\IDraw.cs" />
-    <Compile Include="Interfaces\ISaveVersion.cs" />
     <Compile Include="Modules\FileExtensionModule.cs" />
     <Compile Include="Modules\SketchSaveModule.cs" />
-    <Compile Include="Interfaces\IUI.cs" />
     <Compile Include="Actions\SelectedFrameAction.cs" />
     <Compile Include="Helpers\StrokeHelper.cs" />
     <Compile Include="Actions\DocumentAction.cs" />
@@ -80,6 +75,12 @@
     <Compile Include="Advisors\FrameAdvisor.cs" />
     <Compile Include="Tests\TestApp.cs" />
     <Compile Include="Advisors\Advisor.cs" />
+    <Compile Include="UndoActions\AddFrameUndoAction.cs" />
+    <Compile Include="UndoActions\RemoveFrameUndoAction.cs" />
+    <Compile Include="UndoActions\AddStrokeUndoAction.cs" />
+    <Compile Include="Interfaces\IUndoAction.cs" />
+    <Compile Include="Interfaces\IWrite.cs" />
+    <Compile Include="Interfaces\IWriteVersion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -96,5 +97,6 @@
     <Folder Include="Advisors\" />
     <Folder Include="Actions\" />
     <Folder Include="Helpers\" />
+    <Folder Include="UndoActions\" />
   </ItemGroup>
 </Project>

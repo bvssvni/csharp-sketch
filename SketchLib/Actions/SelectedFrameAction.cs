@@ -10,7 +10,8 @@ namespace Sketch
 			app.Data.Frames.RemoveAt(app.SelectedFrame);
 			app.SelectedFrame = app.Data.Frames.Count - 1;
 			var newFrameIndex = app.SelectedFrame;
-			app.History.RemoveFrame(oldFrameIndex, newFrameIndex, frame);
+			var frameCopy = frame.CopyTo(new Frame());
+			app.History.AddUndoAction(new RemoveFrameUndoAction(oldFrameIndex, newFrameIndex, frameCopy));
 		}
 
 		public static void GotoLast(App app) {
@@ -34,7 +35,7 @@ namespace Sketch
 			app.Data.Frames.Insert(app.SelectedFrame + 1, new Frame());
 			app.SelectedFrame++;
 			int newFrameIndex = app.SelectedFrame;
-			app.History.AddFrame(oldFrameIndex, newFrameIndex);
+			app.History.AddUndoAction(new AddFrameUndoAction(oldFrameIndex, newFrameIndex));
 		}
 	}
 }

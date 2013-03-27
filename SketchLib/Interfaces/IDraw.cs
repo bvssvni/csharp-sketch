@@ -1,6 +1,6 @@
 using System;
 
-namespace Sketch
+namespace Utils
 {
 	public interface IDraw<T>
 	{

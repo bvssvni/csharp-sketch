@@ -5,10 +5,10 @@ using Cairo;
 namespace Sketch
 {
 	public class Stroke : 
-		ICopyTo<Stroke>,
-		IDraw<Cairo.Context>,
-		IRead<Obf.OpenBinaryFormat>,
-		ISaveVersion<Obf.OpenBinaryFormat, int>
+		Utils.ICopyTo<Stroke>,
+		Utils.IDraw<Cairo.Context>,
+		Utils.IRead<Obf.OpenBinaryFormat>,
+		Utils.IWriteVersion<Obf.OpenBinaryFormat, int>
 	{
 		public readonly List<double> X = new List<double>();
 		public readonly List<double> Y = new List<double>();

@@ -1,6 +1,6 @@
 using System;
 
-namespace Sketch
+namespace Utils
 {
 	/// <summary>
 	/// When implementing this interface,

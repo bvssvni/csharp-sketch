@@ -1,28 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Advisors/Advisor.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Objects/OpenBinaryFormat.cs">
     <Files>
-      <File FileName="SketchLib/Advisors/StrokeAdvisor.cs" Line="34" Column="4" />
-      <File FileName="SketchLib/Application/App.cs" Line="49" Column="4" />
-      <File FileName="SketchLib/Advisors/Advisor.cs" Line="4" Column="2" />
+      <File FileName="SketchLib/Advisors/StrokeAdvisor.cs" Line="6" Column="29" />
+      <File FileName="SketchLib/Application/App.cs" Line="1" Column="1" />
+      <File FileName="SketchLib/Advisors/Advisor.cs" Line="67" Column="1" />
+      <File FileName="SketchLib/Advisors/DocumentAdvisor.cs" Line="7" Column="3" />
+      <File FileName="SketchLib/Advisors/HistoryAdvisor.cs" Line="58" Column="36" />
+      <File FileName="SketchLib/Advisors/FrameAdvisor.cs" Line="7" Column="3" />
+      <File FileName="SketchLib/Objects/OpenBinaryFormat.cs" Line="41" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SketchLib" expanded="True">
-            <Node name="Actions" expanded="True" />
-            <Node name="Advisors" expanded="True">
-              <Node name="Advisor.cs" selected="True" />
-            </Node>
-            <Node name="Application" expanded="True" />
-            <Node name="Controls" expanded="True" />
-            <Node name="Helpers" expanded="True" />
-            <Node name="Interfaces" expanded="True" />
-            <Node name="Modules" expanded="True" />
-            <Node name="Objects" expanded="True" />
-            <Node name="Tests" expanded="True" />
-            <Node name="Windows" expanded="True" />
-          </Node>
+          <Node name="SketchLib" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
