@@ -4,7 +4,7 @@ namespace Sketch
 {
 	public interface ISaveVersion<T, V>
 	{
-		void Save(T w, V version);
+		void Save(T writer, V version);
 	}
 }
 
