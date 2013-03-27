@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
+using Utils.Document;
 
 namespace Sketch
 {
 	public class FrameData :
-		Utils.IRead<Obf.OpenBinaryFormat>,
-		Utils.IWrite<Obf.OpenBinaryFormat>
+		IRead<Obf.OpenBinaryFormat>,
+		IWrite<Obf.OpenBinaryFormat>
 	{
 		public List<Frame> Frames;
 		public int CurrentVersion = 1;

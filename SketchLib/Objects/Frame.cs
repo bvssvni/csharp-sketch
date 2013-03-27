@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Utils.Document;
 
 namespace Sketch
 {
 	public class Frame :
-		Utils.IDraw<Cairo.Context>,
-		Utils.IDraw<Cairo.ImageSurface>,
-		Utils.ICopyTo<Frame>,
-		Utils.IRead<Obf.OpenBinaryFormat>,
-		Utils.IWriteVersion<Obf.OpenBinaryFormat, int>
+		IDraw<Cairo.Context>,
+		IDraw<Cairo.ImageSurface>,
+		ICopyTo<Frame>,
+		IRead<Obf.OpenBinaryFormat>,
+		IWriteVersion<Obf.OpenBinaryFormat, int>
 	{
 		public List<Stroke> Strokes;
 

@@ -1,8 +1,9 @@
 using System;
+using Utils.Document;
 
 namespace Sketch
 {
-	public class AddStrokeUndoAction : Utils.IUndoAction<App>
+	public class AddStrokeUndoAction : IUndoAction<App>
 	{
 		public int FrameIndex;
 		public int StrokeIndex;

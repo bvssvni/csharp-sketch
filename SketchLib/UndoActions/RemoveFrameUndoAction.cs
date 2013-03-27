@@ -1,8 +1,9 @@
 using System;
+using Utils.Document;
 
 namespace Sketch
 {
-	public class RemoveFrameUndoAction : Utils.IUndoAction<App> {
+	public class RemoveFrameUndoAction : IUndoAction<App> {
 		public int OldFrameIndex;
 		public int NewFrameIndex;
 		public Frame Frame;

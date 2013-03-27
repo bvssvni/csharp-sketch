@@ -47,7 +47,6 @@
     <Compile Include="Objects\Frame.cs" />
     <Compile Include="Objects\Stroke.cs" />
     <Compile Include="Objects\Point.cs" />
-    <Compile Include="Objects\History.cs" />
     <Compile Include="Objects\OpenBinaryFormat.cs" />
     <Compile Include="Application\App.cs" />
     <Compile Include="Tests\TestOpenSave.cs" />
@@ -56,16 +55,8 @@
     <Compile Include="gtk-gui\SketchWindow.cs" />
     <Compile Include="Windows\SketchWindow.cs" />
     <Compile Include="Objects\FrameData.cs" />
-    <Compile Include="Modules\DocumentModule.cs" />
-    <Compile Include="Modules\OpenFileModule.cs" />
-    <Compile Include="Modules\SaveFileModule.cs" />
     <Compile Include="Modules\CairoFrameModule.cs" />
     <Compile Include="Modules\CairoFillModule.cs" />
-    <Compile Include="Interfaces\ICopyTo.cs" />
-    <Compile Include="Interfaces\IRead.cs" />
-    <Compile Include="Interfaces\IDraw.cs" />
-    <Compile Include="Modules\FileExtensionModule.cs" />
-    <Compile Include="Modules\SketchSaveModule.cs" />
     <Compile Include="Actions\SelectedFrameAction.cs" />
     <Compile Include="Helpers\StrokeHelper.cs" />
     <Compile Include="Actions\DocumentAction.cs" />
@@ -78,9 +69,8 @@
     <Compile Include="UndoActions\AddFrameUndoAction.cs" />
     <Compile Include="UndoActions\RemoveFrameUndoAction.cs" />
     <Compile Include="UndoActions\AddStrokeUndoAction.cs" />
-    <Compile Include="Interfaces\IUndoAction.cs" />
-    <Compile Include="Interfaces\IWrite.cs" />
-    <Compile Include="Interfaces\IWriteVersion.cs" />
+    <Compile Include="Packs\Utils.Document.cs" />
+    <Compile Include="Packs\Utils.Document.Gtk.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -93,10 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Windows\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Advisors\" />
     <Folder Include="Actions\" />
     <Folder Include="Helpers\" />
     <Folder Include="UndoActions\" />
+    <Folder Include="Packs\" />
   </ItemGroup>
 </Project>

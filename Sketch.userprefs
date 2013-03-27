@@ -1,16 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Advisors/HistoryAdvisor.cs">
-    <Files>
-      <File FileName="SketchLib/Advisors/HistoryAdvisor.cs" Line="6" Column="50" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="SketchLib" expanded="True">
+            <Node name="Actions" expanded="True" />
             <Node name="Advisors" expanded="True">
               <Node name="HistoryAdvisor.cs" selected="True" />
             </Node>
+            <Node name="Application" expanded="True" />
+            <Node name="Modules" expanded="True" />
+            <Node name="Objects" expanded="True" />
+            <Node name="Packs" expanded="True" />
+            <Node name="UndoActions" expanded="True" />
           </Node>
         </State>
       </Pad>

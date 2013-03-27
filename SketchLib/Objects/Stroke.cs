@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
 using Cairo;
+using Utils.Document;
 
 namespace Sketch
 {
 	public class Stroke : 
-		Utils.ICopyTo<Stroke>,
-		Utils.IDraw<Cairo.Context>,
-		Utils.IRead<Obf.OpenBinaryFormat>,
-		Utils.IWriteVersion<Obf.OpenBinaryFormat, int>
+		ICopyTo<Stroke>,
+		IDraw<Cairo.Context>,
+		IRead<Obf.OpenBinaryFormat>,
+		IWriteVersion<Obf.OpenBinaryFormat, int>
 	{
 		public readonly List<double> X = new List<double>();
 		public readonly List<double> Y = new List<double>();
