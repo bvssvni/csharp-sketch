@@ -2,50 +2,41 @@ using System;
 
 namespace Sketch
 {
-	public class StrokeAdvisor
+	public class StrokeAdvisor : 
+		Utils.UserInterfaceAdvisor<StrokeAdvisor.Event, StrokeAdvisor.Action, App.UI>
 	{
 		private App m_app;
-		
-		public bool StartStroke;
-		public bool Stroking;
-		public bool EndStroke;
+
+		public enum Event
+		{
+			StartStroke,
+			Stroking,
+			EndStroke
+		}
+
+		// There are no actions since everything happens through a helper.
+		public enum Action
+		{
+		}
 
 		public StrokeAdvisor(App app)
 		{
 			m_app = app;
 		}
 
-		public bool ShouldStartStroke() {
-			if (m_app.IsBusy()) return false;
-			if (m_app.StrokeHelper != null) return false;
-			
-			return StartStroke;
-		}
-		
-		public bool ShouldStroke() {
-			if (m_app.IsBusy()) return false;
-			if (m_app.StrokeHelper == null) return false;
-			
-			return Stroking;
-		}
-		
-		public bool ShouldEndStroke() {
-			if (m_app.IsBusy()) return false;
-			if (m_app.StrokeHelper == null) return false;
-			
-			return EndStroke;
+		public override void DoAction(Event e, Action action)
+		{
 		}
 
-		public bool ShouldRefreshGraphics() {
-			if (m_app.IsBusy()) return false;
+		public override void Refresh(Event e, App.UI ui)
+		{
+			if (m_app.IsBusy()) return;
 
-			return true;
-		}
-
-		public bool ShouldRefreshTitle() {
-			if (m_app.IsBusy()) return false;
-
-			return true;
+			if (ui == App.UI.Graphics) {
+				m_app.Refresh(ui);
+			} else if (ui == App.UI.Title) {
+				m_app.Refresh(ui);
+			}
 		}
 	}
 }

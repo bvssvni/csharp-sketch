@@ -32,17 +32,11 @@ namespace Sketch
 			public void Undo(App app) {
 				app.Data.Frames.RemoveAt(NewFrameIndex);
 				app.SelectedFrame = OldFrameIndex;
-
-				app.RefreshUI(UI.Graphics);
-				app.RefreshUI(UI.Title);
 			}
 
 			public void Redo(App app) {
 				app.Data.Frames.Insert(NewFrameIndex, new Frame());
 				app.SelectedFrame = NewFrameIndex;
-
-				app.RefreshUI(UI.Graphics);
-				app.RefreshUI(UI.Title);
 			}
 
 			public void Dispose() {
@@ -65,17 +59,11 @@ namespace Sketch
 				var frameCopy = Frame.CopyTo(new Frame());
 				app.Data.Frames.Insert(OldFrameIndex, frameCopy);
 				app.SelectedFrame = OldFrameIndex;
-
-				app.RefreshUI(UI.Graphics);
-				app.RefreshUI(UI.Title);
 			}
 
 			public void Redo(App app) {
 				app.Data.Frames.RemoveAt(OldFrameIndex);
 				app.SelectedFrame = NewFrameIndex;
-
-				app.RefreshUI(UI.Graphics);
-				app.RefreshUI(UI.Title);
 			}
 
 			public void Dispose() {
@@ -98,18 +86,12 @@ namespace Sketch
 			public void Undo(App app) {
 				app.Data.Frames[FrameIndex].Strokes.RemoveAt(StrokeIndex);
 				app.SelectedFrame = FrameIndex;
-
-				app.RefreshUI(UI.Title);
-				app.RefreshUI(UI.Graphics);
 			}
 
 			public void Redo(App app) {
 				var strokeCopy = Stroke.CopyTo(new Stroke());
 				app.Data.Frames[FrameIndex].Strokes.Insert(StrokeIndex, strokeCopy);
 				app.SelectedFrame = FrameIndex;
-
-				app.RefreshUI(UI.Title);
-				app.RefreshUI(UI.Graphics);
 			}
 
 			public void Dispose() {

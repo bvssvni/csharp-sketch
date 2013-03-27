@@ -16,13 +16,16 @@ public partial class SketchWindow: Gtk.Window
 
 		sketchcontrol1.App = m_app;
 
-		m_app.RefreshUI(UI.Title);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.Loading);
 	}
 
-	public void Refresh(UI ui) {
+	public void Refresh(App.UI ui) {
 		switch (ui) {
-			case UI.Title: RefreshTitle(); break;
-			case UI.Graphics: sketchcontrol1.RefreshGraphics(); break;
+			case App.UI.Title: RefreshTitle(); break;
+			case App.UI.Graphics: sketchcontrol1.RefreshGraphics(); break;
+			case App.UI.StartPreview: sketchcontrol1.Preview = true; break;
+			case App.UI.StopPreview: sketchcontrol1.Preview = false; break;
 		}
 	}
 
@@ -37,123 +40,94 @@ public partial class SketchWindow: Gtk.Window
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.Closing = true;
-		if (!advisor.ShouldClose()) a.RetVal = true;
-
-		m_app.Do(advisor);
+		var advisor = new DocumentAdvisor(m_app);
+		m_app.DeleteEventArgs = a;
+		advisor.Do(DocumentAdvisor.Event.Closing);
 	}
+
 	protected void OnAddActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.AddNewFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.AddNewFrame);
 	}
 
 	protected void OnGoForwardActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.GotoNextFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.GotoNextFrame);
 	}
 
 	protected void OnGoBackActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.GotoPreviousFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.GotoPreviousFrame);
 	}
 
 	protected void OnGotoFirstActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.GotoFirstFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.GotoFirstFrame);
 	}
 
 	protected void OnGotoLastActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.GotoLastFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.GotoLastFrame);
 	}
 
 	protected void OnRemoveActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new SketchAdvisor(m_app);
-		advisor.DeleteSelectedFrame = true;
-		m_app.Do(advisor);
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.DeleteSelectedFrame);
 	}
 
 	protected void OnMediaPlayActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		sketchcontrol1.Preview = true;
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.StartPreview);
 	}
 
 	protected void OnMediaStopActionActivated (object sender, EventArgs e)
 	{
-		sketchcontrol1.Preview = false;
+		var advisor = new FrameAdvisor(m_app);
+		advisor.Do(FrameAdvisor.Event.StopPreview);
 	}
 
 	protected void OnUndoAction1Activated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.History.Undo(m_app);
+		var advisor = new HistoryAdvisor(m_app);
+		advisor.Do(HistoryAdvisor.Event.UndoClicked);
 	}
 
 	protected void OnRedoAction1Activated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		m_app.History.Redo(m_app);
+		var advisor = new HistoryAdvisor(m_app);
+		advisor.Do(HistoryAdvisor.Event.RedoClicked);
 	}
 
 	protected void OnSaveActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		var window = this;
-		DocumentModule.Save(window, m_app.FileExtensions, m_app.FileName, m_app);
-
-		m_app.RefreshUI(UI.Title);
+		var advisor = new DocumentAdvisor(m_app);
+		m_app.Window = this;
+		advisor.Do(DocumentAdvisor.Event.Save);
 	}
 
 	protected void OnOpenActionActivated (object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		var window = this;
-		DocumentModule.Open(window, m_app.FileExtensions, m_app);
-
-		m_app.RefreshUI(UI.Title);
-		m_app.RefreshUI(UI.Graphics);
+		var advisor = new DocumentAdvisor(m_app);
+		m_app.Window = this;
+		advisor.Do(DocumentAdvisor.Event.Open);
 	}
 
 	protected void OnNewActionActivated(object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		// If the program is started by passing file to command line, this might not work.
-		System.Diagnostics.Process.Start(Environment.CommandLine);
+		var advisor = new DocumentAdvisor(m_app);
+		advisor.Do(DocumentAdvisor.Event.New);
 	}
 	
 	protected void OnSaveAsActionActivated(object sender, EventArgs e)
 	{
-		if (m_app == null) return;
-		if (m_app.IsBusy()) return;
-
-		var window = this;
-		DocumentModule.SaveAs(window, m_app.FileExtensions, m_app);
-
-		m_app.RefreshUI(UI.Title);
+		var advisor = new DocumentAdvisor(m_app);
+		advisor.Do(DocumentAdvisor.Event.SaveAs);
 	}
 }

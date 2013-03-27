@@ -2,43 +2,31 @@ using System;
 
 namespace Sketch
 {
+	/// <summary>
+	/// This object stores application data and delegates refreshes to the interface.
+	/// Usually there is one App object per window.
+	/// </summary>
 	public class App :
 		IDraw<Cairo.Context>,
 		IRead<string>,
-		ISave<string>,
-		IUI<UI>,
-		IDo<SketchAdvisor>
+		ISave<string>
 	{
-		public FrameData Data;
-		private int m_selectedFrame;
-		private string m_fileName;
-		private string[] m_fileExtensions = new string[]{".obf.gz", ".obf"};
-
-		private History m_history;
-
-		public delegate void RefreshDelegate(UI ui);
+		public enum UI
+		{
+			Title,
+			Graphics,
+			StartPreview,
+			StopPreview
+		}
+		
 		public delegate bool IsBusyDelegate();
-
-		public RefreshDelegate Refresh;
-		public RefreshDelegate RefreshTitle;
+		public delegate void RefreshDelegate(UI ui);
+		
 		public IsBusyDelegate IsBusy;
-
-		public void RefreshUI(UI ui) {
-			Refresh(ui);
-		}
-
-		public void Do(SketchAdvisor advisor) {
-			if (advisor.ShouldDeleteSelectedFrame()) SelectedFrameAction.Delete(this);
-			if (advisor.ShouldGotoLastFrame()) SelectedFrameAction.GotoLast(this);
-			if (advisor.ShouldGotoFirstFrame()) SelectedFrameAction.GotoFirst(this);
-			if (advisor.ShouldGotoPreviousFrame()) SelectedFrameAction.GotoPrevious(this);
-			if (advisor.ShouldGotoNextFrame()) SelectedFrameAction.GotoNext(this);
-			if (advisor.ShouldAddNewFrame()) SelectedFrameAction.AddNewFrame(this);
-			if (advisor.ShouldClose()) ClosingAction.Close(this);
-			if (advisor.ShouldRefreshTitle()) Refresh(UI.Title);
-			if (advisor.ShouldRefreshGraphics()) Refresh(UI.Graphics);
-		}
-
+		public RefreshDelegate Refresh;
+		
+		public History m_history;
+		
 		public History History {
 			get {
 				return m_history;
@@ -48,32 +36,14 @@ namespace Sketch
 			}
 		}
 
-		public string[] FileExtensions {
-			get {
-				return m_fileExtensions;
-			}
-			set {
-				m_fileExtensions = value;
-			}
-		}
+		public StrokeHelper StrokeHelper;
 
-		public string FileName {
-			get {
-				return m_fileName;
-			}
-			set {
-				m_fileName = value;
-			}
-		}
-
-		public int SelectedFrame {
-			get {
-				return m_selectedFrame;
-			}
-			set {
-				m_selectedFrame = value;
-			}
-		}
+		public Gtk.Window Window;
+		public Gtk.DeleteEventArgs DeleteEventArgs;
+		public FrameData Data;
+		public int SelectedFrame;
+		public string FileName;
+		public string[] FileExtensions = new string[]{".obf.gz", ".obf"};
 
 		public App ()
 		{
@@ -84,37 +54,6 @@ namespace Sketch
 			Data = new FrameData();
 			Data.Frames.Add(new Frame());
 			SelectedFrame = 0;
-		}
-
-		
-		public bool HasSelectedFrame {
-			get {
-				if (Data.Frames.Count == 0) return false;
-				if (SelectedFrame < 0) return false;
-				if (SelectedFrame >= Data.Frames.Count) return false;
-				
-				return true;
-			}
-		}
-		
-		public void BeginStroke(Stroke stroke) {
-			Data.Frames[SelectedFrame].Strokes.Add(stroke);
-		}
-		
-		public void EndStroke() {
-			var frame = Data.Frames[SelectedFrame];
-			if (frame.Strokes.Count == 0) return;
-			
-			History.AddStroke(this);
-		}
-		
-		public Stroke LastStroke() {
-			if (SelectedFrame < 0 || SelectedFrame >= Data.Frames.Count) return null;
-			
-			var strokes = Data.Frames[SelectedFrame].Strokes;
-			if (strokes.Count == 0) return null;
-			
-			return strokes[strokes.Count-1];
 		}
 		
 		public void Draw(Cairo.Context context) {

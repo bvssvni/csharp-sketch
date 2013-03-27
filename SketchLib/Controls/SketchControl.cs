@@ -69,51 +69,44 @@ namespace Sketch
 		public SketchControl ()
 		{
 			var mousedown = false;
+			var strokeHelper = new StrokeHelper();
+			StrokeAdvisor advisor = null;
 
 			// Insert initialization code here.
 			this.ButtonPressEvent += delegate(object o, Gtk.ButtonPressEventArgs args) {
-				if (m_app.IsBusy()) return;
-				if (m_app == null) return;
-				if (!m_app.HasSelectedFrame) return;
 				if (args.Event.Button != 1) return;
+				if (m_app == null) return;
+				if (m_app.IsBusy()) return;
 
-				var stroke = new Stroke();
-				stroke.Add(new Point(args.Event.X, args.Event.Y));
-				m_app.BeginStroke(stroke);
+				advisor = new StrokeAdvisor(m_app);
+				var frame = m_app.Data.Frames[m_app.SelectedFrame];
+				strokeHelper.Step1_SetFrame(frame);
+				strokeHelper.Step2_CreateStroke();
+				strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
 				mousedown = true;
+				advisor.Do(StrokeAdvisor.Event.StartStroke);
 			};
 			this.ButtonReleaseEvent += delegate(object o, Gtk.ButtonReleaseEventArgs args) {
-				if (m_app.IsBusy()) return;
-				if (m_app == null) return;
-				if (!m_app.HasSelectedFrame) return;
 				if (args.Event.Button != 1) return;
+				if (m_app.IsBusy()) return;
+				if (advisor == null) return;
 
-				var lastStroke = m_app.LastStroke();
-				if (lastStroke == null) return;
-				
-				lastStroke.Add(new Point(args.Event.X, args.Event.Y));
-
-				m_app.EndStroke();
+				strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
+				strokeHelper.Step4_EndStroke(m_app);
 				mousedown = false;
-
-				m_app.RefreshUI(UI.Title);
-				m_app.RefreshUI(UI.Graphics);
+				advisor.Do(StrokeAdvisor.Event.EndStroke);
 			};
 			this.MotionNotifyEvent += delegate(object o, Gtk.MotionNotifyEventArgs args) {
-				if (m_app.IsBusy()) return;
 				if (!mousedown) return;
+				if (m_app == null) return;
+				if (m_app.IsBusy()) return;
+				if (advisor == null) return;
 
 				var state = (ModifierType)args.Event.State;
 				if ((state & ModifierType.Button1Mask) != 0) {
-					if (m_app == null) return;
-					if (!m_app.HasSelectedFrame) return;
+					strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
 
-					var lastStroke = m_app.LastStroke();
-					if (lastStroke == null) return;
-
-					lastStroke.Add(new Point(args.Event.X, args.Event.Y));
-
-					m_app.RefreshUI(UI.Graphics);
+					advisor.Do(StrokeAdvisor.Event.Stroking);
 				}
 			};
 			

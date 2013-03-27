@@ -4,6 +4,7 @@
 
 25.03.2013
 
+*Prepare scalable architecture.
 *Add custom block for Stroke.
 *Add gzip compression.
 *Add generic interfaces.

@@ -8,12 +8,12 @@ namespace Sketch
 			Gtk.Application.Quit();
 		}
 
-		public static void Open(App app, Gtk.Window window) {
-			DocumentModule.Save(window, app.FileExtensions, app.FileName, app);
+		public static void Open(App app) {
+			DocumentModule.Open(app.Window, app.FileExtensions, app);
 		}
 
-		public static void CancelCloseEvent(App app, Gtk.DeleteEventArgs args) {
-			args.RetVal = true;
+		public static void CancelCloseEvent(App app) {
+			app.DeleteEventArgs.RetVal = true;
 		}
 
 		public static void New(App app) {
@@ -21,8 +21,12 @@ namespace Sketch
 			System.Diagnostics.Process.Start(Environment.CommandLine);
 		}
 
-		public static void Save(App app, Gtk.Window window) {
-			DocumentModule.Save(window, app.FileExtensions, app.FileName, app);
+		public static void Save(App app) {
+			DocumentModule.Save(app.Window, app.FileExtensions, app.FileName, app);
+		}
+
+		public static void SaveAs(App app) {
+			DocumentModule.Save(app.Window, app.FileExtensions, app.FileName, app);
 		}
 	}
 }

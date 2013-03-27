@@ -3,8 +3,7 @@ using System;
 namespace Sketch
 {
 	public class HistoryAdvisor :
-		IShould<HistoryAdvisor.Event, HistoryAdvisor.Action>,
-		ISuggest<App, HistoryAdvisor.Action>
+		Utils.UserInterfaceAdvisor<HistoryAdvisor.Event, HistoryAdvisor.Action, App.UI>
 	{
 		private App m_app;
 
@@ -25,24 +24,22 @@ namespace Sketch
 			m_app = app;
 		}
 
-		public AppActionDelegate<App> Suggest(Action action) {
-			switch (action) {
-				case Action.Undo: return m_app.History.Undo;
-				case Action.Redo: return m_app.History.Redo;
-			}
+		public override void DoAction(Event e, Action action) {
+			if (m_app.IsBusy()) return;
 
-			return null;
+			switch (action) {
+				case Action.Undo: if (ShouldUndo(e)) m_app.History.Undo(m_app); return;
+				case Action.Redo: if (ShouldRedo(e)) m_app.History.Redo(m_app); return;
+			}
 		}
 
-		public bool Should(Event e, Action action) {
-			if (m_app.IsBusy()) return false;
+		public override void Refresh(Event e, App.UI ui) {
+			if (m_app.IsBusy()) return;
 
-			switch (action) {
-				case Action.Undo: return ShouldUndo(e);
-				case Action.Redo: return ShouldRedo(e);
+			switch (ui) {
+				case App.UI.Graphics: if (ShouldRefreshGraphics(e)) m_app.Refresh(ui); return;
+				case App.UI.Title: if (ShouldRefreshTitle(e)) m_app.Refresh(ui); return;
 			}
-
-			return false;
 		}
 
 		private bool ShouldUndo(Event e) {
@@ -55,6 +52,16 @@ namespace Sketch
 			if (m_app.History.Cursor == m_app.History.Count) return false;
 			
 			return e == Event.RedoClicked;
+		}
+
+		private bool ShouldRefreshGraphics(Event e) {
+			return e == Event.RedoClicked ||
+				e == Event.UndoClicked;
+		}
+
+		private bool ShouldRefreshTitle(Event e) {
+			return e == Event.RedoClicked ||
+				e == Event.UndoClicked;
 		}
 	}
 }

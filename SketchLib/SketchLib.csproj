@@ -70,14 +70,16 @@
     <Compile Include="Interfaces\ISaveVersion.cs" />
     <Compile Include="Modules\FileExtensionModule.cs" />
     <Compile Include="Modules\SketchSaveModule.cs" />
-    <Compile Include="Modules\FrameNavigationModule.cs" />
-    <Compile Include="Advisors\SketchAdvisor.cs" />
-    <Compile Include="Application\Act.cs" />
-    <Compile Include="Interfaces\IDo.cs" />
-    <Compile Include="Application\UI.cs" />
     <Compile Include="Interfaces\IUI.cs" />
     <Compile Include="Actions\SelectedFrameAction.cs" />
-    <Compile Include="Actions\ClosingAction.cs" />
+    <Compile Include="Helpers\StrokeHelper.cs" />
+    <Compile Include="Actions\DocumentAction.cs" />
+    <Compile Include="Advisors\DocumentAdvisor.cs" />
+    <Compile Include="Advisors\HistoryAdvisor.cs" />
+    <Compile Include="Advisors\StrokeAdvisor.cs" />
+    <Compile Include="Advisors\FrameAdvisor.cs" />
+    <Compile Include="Tests\TestApp.cs" />
+    <Compile Include="Advisors\Advisor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -93,5 +95,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Advisors\" />
     <Folder Include="Actions\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
