@@ -64,8 +64,8 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Modules\VideoFormats.cs" />
     <Compile Include="Modules\FFMPEG.cs" />
+    <Compile Include="Modules\VideoFormatsModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

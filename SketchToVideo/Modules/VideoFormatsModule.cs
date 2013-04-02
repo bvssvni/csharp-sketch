@@ -14,12 +14,15 @@ namespace SketchToVideo
 			return System.IO.File.Exists(ffmpeg);
 		}
 
-		public static void ConvertPNG(string folder, string filename, int framesPerSecond) {
+		public static void ConvertPNG(string folder, 
+		                              string filename, 
+		                              int framesPerSecond) {
 			var ffmpeg = FFMPEG.Path();
 			var input = folder + System.IO.Path.DirectorySeparatorChar + "%06d.png";
 			var args = "-f image2 -r " + framesPerSecond + 
 					" -i '" + input +
-					"' -c:v libx264 -r 30 '" +  filename + "'";
+					"' -vcodec mpeg4 " + 
+					" -r 30 '" +  filename + "'";
 			var info = new System.Diagnostics.ProcessStartInfo();
 			// info.UseShellExecute = true;
 			info.FileName = ffmpeg;
