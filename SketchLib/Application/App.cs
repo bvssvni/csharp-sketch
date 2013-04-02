@@ -16,8 +16,7 @@ namespace Sketch
 		{
 			Title,
 			Graphics,
-			StartPreview,
-			StopPreview
+			Buttons
 		}
 		
 		public delegate bool IsBusyDelegate();

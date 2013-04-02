@@ -15,9 +15,7 @@ namespace Sketch
 			GotoPreviousFrame,
 			GotoNextFrame,
 			AddNewFrame,
-			Loading,
-			StartPreview,
-			StopPreview,
+			Loading
 		}
 
 		public enum Action
@@ -81,16 +79,6 @@ namespace Sketch
 						m_app.Refresh(ui);
 					}
 					return;
-				case App.UI.StartPreview:
-					if (ShouldStartPreview(e)) {
-						m_app.Refresh(ui);
-					}
-					return;
-				case App.UI.StopPreview:
-					if (ShouldStopPreview(e)) {
-						m_app.Refresh(ui);
-					}
-					return;
 			}
 		}
 
@@ -140,16 +128,6 @@ namespace Sketch
 			if (m_app.IsBusy()) return false;
 
 			return e == Event.AddNewFrame;
-		}
-
-		private bool ShouldStartPreview(Event e) {
-			if (m_app.IsBusy()) return false;
-
-			return e == Event.StartPreview;
-		}
-
-		private bool ShouldStopPreview(Event e) {
-			return e == Event.StopPreview;
 		}
 
 		private bool ShouldRefreshTitle(Event e) {

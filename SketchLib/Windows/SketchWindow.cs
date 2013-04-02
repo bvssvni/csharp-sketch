@@ -24,16 +24,7 @@ public partial class SketchWindow: Gtk.Window
 		switch (ui) {
 			case App.UI.Title: RefreshTitle(); break;
 			case App.UI.Graphics: sketchcontrol1.RefreshGraphics(); break;
-			case App.UI.StartPreview: {
-				sketchcontrol1.Preview = true; 
-				RefreshButtons();
-				break;
-			}
-			case App.UI.StopPreview: {
-				sketchcontrol1.Preview = false; 
-				RefreshButtons();
-				break;
-			}
+			case App.UI.Buttons: RefreshButtons(); break;
 		}
 	}
 
@@ -49,7 +40,7 @@ public partial class SketchWindow: Gtk.Window
 	public void RefreshButtons() {
 		var previewing = sketchcontrol1.Preview;
 
-		newAction1.Sensitive = !previewing;
+		newAction.Sensitive = !previewing;
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -96,14 +87,14 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnMediaPlayActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new FrameAdvisor(m_app);
-		advisor.Do(FrameAdvisor.Event.StartPreview);
+		var advisor = new PreviewAdvisor(m_app, sketchcontrol1);
+		advisor.Do(PreviewAdvisor.Event.StartPreview);
 	}
 
 	protected void OnMediaStopActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new FrameAdvisor(m_app);
-		advisor.Do(FrameAdvisor.Event.StopPreview);
+		var advisor = new PreviewAdvisor(m_app, sketchcontrol1);
+		advisor.Do(PreviewAdvisor.Event.StopPreview);
 	}
 
 	protected void OnUndoAction1Activated (object sender, EventArgs e)

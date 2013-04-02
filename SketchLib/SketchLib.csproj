@@ -65,12 +65,14 @@
     <Compile Include="Advisors\StrokeAdvisor.cs" />
     <Compile Include="Advisors\FrameAdvisor.cs" />
     <Compile Include="Tests\TestApp.cs" />
-    <Compile Include="Advisors\Advisor.cs" />
     <Compile Include="UndoActions\AddFrameUndoAction.cs" />
     <Compile Include="UndoActions\RemoveFrameUndoAction.cs" />
     <Compile Include="UndoActions\AddStrokeUndoAction.cs" />
     <Compile Include="Packs\Utils.Document.cs" />
     <Compile Include="Packs\Utils.Document.Gtk.cs" />
+    <Compile Include="Advisors\PreviewAdvisor.cs" />
+    <Compile Include="Advisors\UserInterfaceAdvisor.cs" />
+    <Compile Include="Actions\PreviewAction.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

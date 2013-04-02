@@ -8,6 +8,7 @@ namespace Sketch
 	{
 		private App m_app;
 		private int m_previewFrame;
+		private System.Threading.Thread m_previewThread;
 
 		/// <summary>
 		/// Has three stages:
@@ -26,6 +27,11 @@ namespace Sketch
 
 		public bool Preview {
 			get {
+				if (m_preview == 1) {
+					// Wait for the preview to finish.
+					m_previewThread.Join();
+				}
+
 				return m_preview > 0;
 			}
 			set {
@@ -37,8 +43,8 @@ namespace Sketch
 				if (m_preview == 1) return;
 				if (m_preview == 0 && value) {
 					m_preview = 1;
-					System.Threading.Thread th = new System.Threading.Thread(RunPreview);
-					th.Start();
+					m_previewThread = new System.Threading.Thread(RunPreview);
+					m_previewThread.Start();
 				}
 			}
 		}
