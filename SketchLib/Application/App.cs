@@ -30,8 +30,6 @@ namespace Sketch
 
 		public StrokeHelper StrokeHelper;
 
-		public Gtk.Window Window;
-		public Gtk.DeleteEventArgs DeleteEventArgs;
 		public FrameData Data;
 		public int SelectedFrame;
 		public string FileName;

@@ -2,6 +2,10 @@
 + Completed on later day.
 - Decided against on later day.
 
+02.04.2013
+
+Disable buttons that are not available.
+
 25.03.2013
 
 *Prepare scalable architecture.

@@ -24,8 +24,16 @@ public partial class SketchWindow: Gtk.Window
 		switch (ui) {
 			case App.UI.Title: RefreshTitle(); break;
 			case App.UI.Graphics: sketchcontrol1.RefreshGraphics(); break;
-			case App.UI.StartPreview: sketchcontrol1.Preview = true; break;
-			case App.UI.StopPreview: sketchcontrol1.Preview = false; break;
+			case App.UI.StartPreview: {
+				sketchcontrol1.Preview = true; 
+				RefreshButtons();
+				break;
+			}
+			case App.UI.StopPreview: {
+				sketchcontrol1.Preview = false; 
+				RefreshButtons();
+				break;
+			}
 		}
 	}
 
@@ -37,11 +45,16 @@ public partial class SketchWindow: Gtk.Window
 
 		this.Title = "Sketch - " + filename + " (" + m_app.SelectedFrame.ToString() + ")";
 	}
+
+	public void RefreshButtons() {
+		var previewing = sketchcontrol1.Preview;
+
+		newAction1.Sensitive = !previewing;
+	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
-		var advisor = new DocumentAdvisor(m_app);
-		m_app.DeleteEventArgs = a;
+		var advisor = new DocumentAdvisor(m_app, this, a);
 		advisor.Do(DocumentAdvisor.Event.Closing);
 	}
 
@@ -107,27 +120,25 @@ public partial class SketchWindow: Gtk.Window
 
 	protected void OnSaveActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new DocumentAdvisor(m_app);
-		m_app.Window = this;
+		var advisor = new DocumentAdvisor(m_app, this, null);
 		advisor.Do(DocumentAdvisor.Event.Save);
 	}
 
 	protected void OnOpenActionActivated (object sender, EventArgs e)
 	{
-		var advisor = new DocumentAdvisor(m_app);
-		m_app.Window = this;
+		var advisor = new DocumentAdvisor(m_app, this, null);
 		advisor.Do(DocumentAdvisor.Event.Open);
 	}
 
 	protected void OnNewActionActivated(object sender, EventArgs e)
 	{
-		var advisor = new DocumentAdvisor(m_app);
+		var advisor = new DocumentAdvisor(m_app, this, null);
 		advisor.Do(DocumentAdvisor.Event.New);
 	}
 	
 	protected void OnSaveAsActionActivated(object sender, EventArgs e)
 	{
-		var advisor = new DocumentAdvisor(m_app);
+		var advisor = new DocumentAdvisor(m_app, this, null);
 		advisor.Do(DocumentAdvisor.Event.SaveAs);
 	}
 }

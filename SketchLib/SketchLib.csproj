@@ -88,5 +88,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="UndoActions\" />
     <Folder Include="Packs\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>

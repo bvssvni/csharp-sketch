@@ -1,14 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="SketchLib" expanded="True">
-            <Node name="Actions" expanded="True" />
-            <Node name="Advisors" expanded="True">
-              <Node name="HistoryAdvisor.cs" selected="True" />
-            </Node>
             <Node name="Application" expanded="True" />
             <Node name="Modules" expanded="True" />
             <Node name="Objects" expanded="True" />
