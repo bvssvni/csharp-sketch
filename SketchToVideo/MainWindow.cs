@@ -7,8 +7,6 @@ public partial class MainWindow: Gtk.Window
 	public MainWindow(): base (Gtk.WindowType.Toplevel)
 	{
 		Build();
-
-		VideoFormats.RefreshComboBox(formatComboBox);
 	}
 	
 	protected void OnDeleteEvent(object sender, DeleteEventArgs a)

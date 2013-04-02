@@ -6,8 +6,6 @@ public partial class MainWindow
 	private global::Gtk.VBox vbox1;
 	private global::Gtk.FileChooserWidget filechooserwidget1;
 	private global::Gtk.HBox hbox1;
-	private global::Gtk.Label label1;
-	private global::Gtk.ComboBox formatComboBox;
 	private global::Gtk.Button exportButton;
 	
 	protected virtual void Build ()
@@ -32,39 +30,21 @@ public partial class MainWindow
 		this.hbox1.Name = "hbox1";
 		this.hbox1.Spacing = 6;
 		// Container child hbox1.Gtk.Box+BoxChild
-		this.label1 = new global::Gtk.Label ();
-		this.label1.Name = "label1";
-		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Format");
-		this.hbox1.Add (this.label1);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label1]));
-		w2.Position = 0;
-		w2.Expand = false;
-		w2.Fill = false;
-		// Container child hbox1.Gtk.Box+BoxChild
-		this.formatComboBox = global::Gtk.ComboBox.NewText ();
-		this.formatComboBox.WidthRequest = 150;
-		this.formatComboBox.Name = "formatComboBox";
-		this.hbox1.Add (this.formatComboBox);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.formatComboBox]));
-		w3.Position = 1;
-		w3.Expand = false;
-		w3.Fill = false;
-		// Container child hbox1.Gtk.Box+BoxChild
 		this.exportButton = new global::Gtk.Button ();
 		this.exportButton.CanFocus = true;
 		this.exportButton.Name = "exportButton";
 		this.exportButton.UseUnderline = true;
 		this.exportButton.Label = global::Mono.Unix.Catalog.GetString ("Start");
 		this.hbox1.Add (this.exportButton);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.exportButton]));
-		w4.Position = 2;
-		w4.Expand = false;
-		w4.Fill = false;
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.exportButton]));
+		w2.Position = 0;
+		w2.Expand = false;
+		w2.Fill = false;
 		this.vbox1.Add (this.hbox1);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
-		w5.Position = 1;
-		w5.Expand = false;
-		w5.Fill = false;
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+		w3.Position = 1;
+		w3.Expand = false;
+		w3.Fill = false;
 		this.Add (this.vbox1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
