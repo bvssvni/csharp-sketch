@@ -36,10 +36,7 @@ namespace Sketch
 		public override void Refresh(Event e, App.UI ui) {
 			if (m_app.IsBusy()) return;
 
-			switch (ui) {
-				case App.UI.Graphics: if (ShouldRefreshGraphics(e)) m_app.Refresh(ui); return;
-				case App.UI.Title: if (ShouldRefreshTitle(e)) m_app.Refresh(ui); return;
-			}
+			m_app.Refresh(ui);
 		}
 
 		private bool ShouldUndo(Event e) {
@@ -52,16 +49,6 @@ namespace Sketch
 			if (m_app.History.Cursor == m_app.History.Count) return false;
 			
 			return e == Event.RedoClicked;
-		}
-
-		private bool ShouldRefreshGraphics(Event e) {
-			return e == Event.RedoClicked ||
-				e == Event.UndoClicked;
-		}
-
-		private bool ShouldRefreshTitle(Event e) {
-			return e == Event.RedoClicked ||
-				e == Event.UndoClicked;
 		}
 	}
 }

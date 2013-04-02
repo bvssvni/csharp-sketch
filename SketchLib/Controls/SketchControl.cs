@@ -45,6 +45,9 @@ namespace Sketch
 					m_preview = 1;
 					m_previewThread = new System.Threading.Thread(RunPreview);
 					m_previewThread.Start();
+					while (m_preview != 2) {
+						System.Threading.Thread.Sleep(0);
+					}
 				}
 			}
 		}

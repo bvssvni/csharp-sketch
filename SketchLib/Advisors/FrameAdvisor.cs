@@ -68,18 +68,7 @@ namespace Sketch
 
 		public override void Refresh(Event e, App.UI ui)
 		{
-			switch (ui) {
-				case App.UI.Graphics:
-					if (ShouldRefreshGraphics(e)) {
-						m_app.Refresh(ui);
-					}
-					return;
-				case App.UI.Title:
-					if (ShouldRefreshTitle(e)) {
-						m_app.Refresh(ui);
-					}
-					return;
-			}
+			m_app.Refresh(ui);
 		}
 
 		public FrameAdvisor(App app)
@@ -128,18 +117,6 @@ namespace Sketch
 			if (m_app.IsBusy()) return false;
 
 			return e == Event.AddNewFrame;
-		}
-
-		private bool ShouldRefreshTitle(Event e) {
-			if (m_app.IsBusy()) return false;
-
-			return true;
-		}
-
-		private bool ShouldRefreshGraphics(Event e) {
-			if (m_app.IsBusy()) return false;
-
-			return e != Event.Loading;
 		}
 	}
 }

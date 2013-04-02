@@ -59,11 +59,7 @@ namespace Sketch
 
 		public override void Refresh(Event e, App.UI ui)
 		{
-			switch (ui) {
-				case App.UI.Buttons: m_app.Refresh(ui); break;
-				case App.UI.Graphics: m_app.Refresh(ui); break;
-				case App.UI.Title: m_app.Refresh(ui); break;
-			}
+			m_app.Refresh(ui);
 		}
 
 		#endregion

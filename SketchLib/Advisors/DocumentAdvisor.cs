@@ -53,24 +53,7 @@ namespace Sketch
 		public override void Refresh(Event e, App.UI ui) {
 			if (m_app.IsBusy()) return;
 
-			if (ui == App.UI.Graphics) {
-				switch (e) {
-					case Event.New:
-					case Event.Open:
-						m_app.Refresh(ui);
-						return;
-				}
-			} else if (ui == App.UI.Title) {
-				switch (e) {
-					case Event.New:
-					case Event.Open:
-					case Event.Save:
-					case Event.SaveAs:
-						m_app.Refresh(ui);
-						return;
-
-				}
-			}
+			m_app.Refresh(ui);
 		}
 
 		public bool ShouldClose(Event e) {

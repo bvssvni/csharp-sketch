@@ -32,11 +32,7 @@ namespace Sketch
 		{
 			if (m_app.IsBusy()) return;
 
-			if (ui == App.UI.Graphics) {
-				m_app.Refresh(ui);
-			} else if (ui == App.UI.Title) {
-				m_app.Refresh(ui);
-			}
+			m_app.Refresh(ui);
 		}
 	}
 }

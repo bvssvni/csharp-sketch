@@ -41,6 +41,19 @@ public partial class SketchWindow: Gtk.Window
 		var previewing = sketchcontrol1.Preview;
 
 		newAction.Sensitive = !previewing;
+		openAction.Sensitive = !previewing;
+		saveAction.Sensitive = !previewing && m_app.FileName != null;
+		saveAsAction.Sensitive = !previewing;
+		undoAction1.Sensitive = !previewing && m_app.History.Cursor > 0;
+		redoAction1.Sensitive = !previewing && m_app.History.Cursor < m_app.History.Count;
+		addAction.Sensitive = !previewing;
+		removeAction.Sensitive = !previewing && m_app.Data.Frames.Count > 1;
+		mediaStopAction.Sensitive = previewing;
+		mediaPlayAction.Sensitive = !previewing;
+		gotoFirstAction.Sensitive = !previewing && m_app.SelectedFrame > 0;
+		gotoLastAction.Sensitive = !previewing && m_app.SelectedFrame < m_app.Data.Frames.Count - 1;
+		goForwardAction.Sensitive = !previewing && m_app.SelectedFrame < m_app.Data.Frames.Count - 1;
+		goBackAction.Sensitive = !previewing && m_app.SelectedFrame > 0;
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
