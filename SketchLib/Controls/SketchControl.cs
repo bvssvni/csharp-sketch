@@ -132,7 +132,7 @@ namespace Sketch
 			if (m_app == null) return true;
 
 			using (var context = Gdk.CairoHelper.Create (ev.Window)) {
-				CairoFillModule.Fill(context, this, new Cairo.Color(1, 1, 1));
+				Utils.CairoFillModule.Fill(context, this, new Cairo.Color(1, 1, 1));
 				context.Antialias = Cairo.Antialias.Subpixel;
 
 				if (m_preview == 0) {

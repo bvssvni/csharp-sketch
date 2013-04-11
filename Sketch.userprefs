@@ -1,15 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Controls/SketchControl.cs">
+    <Files>
+      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="1" Column="1" />
+      <File FileName="SketchLib/todo.txt" Line="6" Column="1" />
+      <File FileName="SketchLib/Controls/SketchControl.cs" Line="20" Column="3" />
+      <File FileName="SketchLib/Packs/Utils.Document.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="SketchLib" expanded="True">
-            <Node name="Application" expanded="True" />
-            <Node name="Modules" expanded="True" />
-            <Node name="Objects" expanded="True" />
+            <Node name="Controls" expanded="True">
+              <Node name="SketchControl.cs" selected="True" />
+            </Node>
             <Node name="Packs" expanded="True" />
-            <Node name="UndoActions" expanded="True" />
+            <Node name="Windows" expanded="True" />
           </Node>
         </State>
       </Pad>
