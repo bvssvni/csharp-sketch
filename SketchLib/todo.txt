@@ -2,6 +2,10 @@
 + Completed on later day.
 - Decided against on later day.
 
+11.04.2013
+
+*Fix toolbar icon size.
+
 02.04.2013
 
 *Disable buttons where actions are not available.

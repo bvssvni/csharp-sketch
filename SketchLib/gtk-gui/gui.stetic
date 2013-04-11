@@ -7,7 +7,7 @@
   <import>
     <widget-library name="../bin/Debug/SketchLib.dll" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="SketchWindow" design-size="567 400">
+  <widget class="Gtk.Window" id="SketchWindow" design-size="995 406">
     <action-group name="Default">
       <action id="newAction">
         <property name="Type">Action</property>
@@ -224,7 +224,8 @@
           <widget class="Gtk.Toolbar" id="toolbar2">
             <property name="MemberName" />
             <property name="ShowArrow">False</property>
-            <property name="IconSize">LargeToolbar</property>
+            <property name="ButtonStyle">Icons</property>
+            <property name="IconSize">SmallToolbar</property>
             <node name="toolbar2" type="Toolbar">
               <node type="Toolitem" action="newAction" />
               <node type="Toolitem" action="openAction" />
