@@ -150,7 +150,8 @@ public partial class SketchWindow
 		this.toolbar2 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar2")));
 		this.toolbar2.Name = "toolbar2";
 		this.toolbar2.ShowArrow = false;
-		this.toolbar2.IconSize = ((global::Gtk.IconSize)(3));
+		this.toolbar2.ToolbarStyle = ((global::Gtk.ToolbarStyle)(0));
+		this.toolbar2.IconSize = ((global::Gtk.IconSize)(2));
 		this.vbox2.Add (this.toolbar2);
 		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.toolbar2]));
 		w2.Position = 0;
@@ -169,8 +170,13 @@ public partial class SketchWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
+<<<<<<< HEAD
 		this.DefaultWidth = 752;
 		this.DefaultHeight = 400;
+=======
+		this.DefaultWidth = 995;
+		this.DefaultHeight = 406;
+>>>>>>> f38be9216120f5f8f81d08a912708d70b6e8e073
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.newAction.Activated += new global::System.EventHandler (this.OnNewActionActivated);

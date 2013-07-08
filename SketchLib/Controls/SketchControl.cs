@@ -135,8 +135,28 @@ namespace Sketch
 			this.QueueDraw();
 		}
 
+<<<<<<< HEAD
 		private void Render (Cairo.Context context) {
 			if (m_app == null) {return;}
+=======
+		protected override bool OnExposeEvent (Gdk.EventExpose ev)
+		{
+			if (m_app == null) return true;
+
+			using (var context = Gdk.CairoHelper.Create (ev.Window)) {
+				Utils.CairoFillModule.Fill(context, this, new Cairo.Color(1, 1, 1));
+				context.Antialias = Cairo.Antialias.Subpixel;
+
+				if (m_preview == 0) {
+					m_app.Draw(context);
+				} else {
+					var n = m_app.Data.Frames.Count;
+					var frame = m_app.Data.Frames[m_previewFrame % n];
+					context.Color = new Cairo.Color(0, 0, 0);
+					frame.Draw(context);
+				}
+			}
+>>>>>>> f38be9216120f5f8f81d08a912708d70b6e8e073
 
 			if (m_preview == 0) {
 				m_app.Draw(context);
