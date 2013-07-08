@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
@@ -7,11 +7,7 @@
   <import>
     <widget-library name="../bin/Debug/SketchLib.dll" internal="true" />
   </import>
-<<<<<<< HEAD
   <widget class="Gtk.Window" id="SketchWindow" design-size="752 400">
-=======
-  <widget class="Gtk.Window" id="SketchWindow" design-size="995 406">
->>>>>>> f38be9216120f5f8f81d08a912708d70b6e8e073
     <action-group name="Default">
       <action id="newAction">
         <property name="Type">Action</property>

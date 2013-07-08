@@ -1,6 +1,7 @@
 using System;
 using Cairo;
 using Gtk;
+using Gdk;
 
 namespace Utils
 {
@@ -23,8 +24,8 @@ namespace Utils
 				using (var context = Gdk.CairoHelper.Create (args.Event.Window)) {
 					CairoFillModule.Fill(context, m_control, new Cairo.Color(1, 1, 1));
 					context.Antialias = Cairo.Antialias.Subpixel;
-					
-					var controlBounds = new Rectangle (0.0, 
+
+					var controlBounds = new Cairo.Rectangle (0.0, 
 					                                   0.0, 
 					                                   control.Allocation.Width, 
 					                                   control.Allocation.Height);
@@ -44,6 +45,19 @@ namespace Utils
 					CairoCanvasViewModule.Draw (context, controlBounds, view);
 				}
 			};
+
+			m_control.ButtonPressEvent += delegate(object o, Gtk.ButtonPressEventArgs args) {
+
+			};
+			m_control.ButtonReleaseEvent += delegate(object o, Gtk.ButtonReleaseEventArgs args) {
+
+			};
+			m_control.MotionNotifyEvent += delegate(object o, Gtk.MotionNotifyEventArgs args) {
+
+			};
+			
+			m_control.Events |= EventMask.ButtonPressMask | EventMask.ButtonReleaseMask | EventMask.PointerMotionMask;
+
 		}
 
 		public void Step2_SetTargetResolution (double targetResolutionWidth,
