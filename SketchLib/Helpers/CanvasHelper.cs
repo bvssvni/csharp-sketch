@@ -12,7 +12,6 @@ namespace Utils
 		private double m_settingsHeight;
 
 		public delegate void RenderDelegate (Context context);
-		public delegate void PositionDelegate (double x, double y);
 
 		public CanvasHelper()
 		{

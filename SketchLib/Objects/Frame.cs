@@ -25,7 +25,7 @@ namespace Sketch
 
 		public void Draw(Cairo.ImageSurface surface) {
 			using (var context = new Cairo.Context(surface)) {
-				Utils.CairoFillModule.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
+				CairoFillModule.Fill(context, surface.Width, surface.Height, new Cairo.Color(1, 1, 1));
 				context.Antialias = Cairo.Antialias.Subpixel;
 				context.Color = new Cairo.Color(0, 0, 0);
 				CairoFrameModule.Draw(context, this);

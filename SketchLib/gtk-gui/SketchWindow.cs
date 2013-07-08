@@ -170,13 +170,8 @@ public partial class SketchWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-<<<<<<< HEAD
 		this.DefaultWidth = 752;
 		this.DefaultHeight = 400;
-=======
-		this.DefaultWidth = 995;
-		this.DefaultHeight = 406;
->>>>>>> f38be9216120f5f8f81d08a912708d70b6e8e073
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.newAction.Activated += new global::System.EventHandler (this.OnNewActionActivated);
