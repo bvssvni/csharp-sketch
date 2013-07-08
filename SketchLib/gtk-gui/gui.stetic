@@ -7,7 +7,7 @@
   <import>
     <widget-library name="../bin/Debug/SketchLib.dll" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="SketchWindow" design-size="567 400">
+  <widget class="Gtk.Window" id="SketchWindow" design-size="752 400">
     <action-group name="Default">
       <action id="newAction">
         <property name="Type">Action</property>
@@ -213,8 +213,7 @@
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterAlways</property>
     <property name="BorderWidth">10</property>
-    <property name="Resizable">False</property>
-    <property name="AllowGrow">False</property>
+    <property name="AllowShrink">True</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.VBox" id="vbox2">
@@ -262,9 +261,7 @@
           </widget>
           <packing>
             <property name="Position">1</property>
-            <property name="AutoSize">True</property>
-            <property name="Expand">False</property>
-            <property name="Fill">False</property>
+            <property name="AutoSize">False</property>
           </packing>
         </child>
       </widget>

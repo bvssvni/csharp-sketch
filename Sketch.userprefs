@@ -1,15 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Modules/CairoFillModule.cs">
+    <Files>
+      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="15" Column="32" />
+      <File FileName="SketchLib/Controls/SketchControl.cs" Line="130" Column="85" />
+      <File FileName="SketchLib/Modules/CairoCanvasViewModule.cs" Line="37" Column="3" />
+      <File FileName="SketchLib/Application/App.cs" Line="48" Column="3" />
+      <File FileName="SketchLib/Helpers/CanvasHelper.cs" Line="7" Column="27" />
+      <File FileName="SketchLib/Modules/CairoFillModule.cs" Line="23" Column="1" />
+      <File FileName="SketchLib/Objects/Frame.cs" Line="3" Column="13" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="SketchLib" expanded="True">
             <Node name="Application" expanded="True" />
-            <Node name="Modules" expanded="True" />
+            <Node name="Controls" expanded="True" />
+            <Node name="Helpers" expanded="True" />
+            <Node name="Modules" expanded="True">
+              <Node name="CairoFillModule.cs" selected="True" />
+            </Node>
             <Node name="Objects" expanded="True" />
-            <Node name="Packs" expanded="True" />
-            <Node name="UndoActions" expanded="True" />
+            <Node name="Windows" expanded="True" />
           </Node>
         </State>
       </Pad>

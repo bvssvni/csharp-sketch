@@ -1,5 +1,6 @@
 using System;
 using Gdk;
+using Utils;
 
 namespace Sketch
 {
@@ -9,6 +10,9 @@ namespace Sketch
 		private App m_app;
 		private int m_previewFrame;
 		private System.Threading.Thread m_previewThread;
+		private double m_settingsWidth = 400.0;
+		private double m_settingsHeight = 300.0;
+		private CanvasHelper m_canvasViewHelper = null;
 
 		/// <summary>
 		/// Has three stages:
@@ -121,33 +125,27 @@ namespace Sketch
 			
 			this.Events = EventMask.ButtonPressMask | EventMask.ButtonReleaseMask | EventMask.PointerMotionMask;
 
+			m_canvasViewHelper = new CanvasHelper ();
+			m_canvasViewHelper.Step1_SetControl (this);
+			m_canvasViewHelper.Step2_SetTargetResolution (m_settingsWidth, m_settingsHeight);
+			m_canvasViewHelper.Step3_SetRenderDelegate (Render);
 		}
 
 		public void RefreshGraphics() {
 			this.QueueDraw();
 		}
 
-		protected override bool OnExposeEvent (Gdk.EventExpose ev)
-		{
-			if (m_app == null) return true;
+		private void Render (Cairo.Context context) {
+			if (m_app == null) {return;}
 
-			using (var context = Gdk.CairoHelper.Create (ev.Window)) {
-				CairoFillModule.Fill(context, this, new Cairo.Color(1, 1, 1));
-				context.Antialias = Cairo.Antialias.Subpixel;
-
-				if (m_preview == 0) {
-					m_app.Draw(context);
-				} else {
-					var n = m_app.Data.Frames.Count;
-					var frame = m_app.Data.Frames[m_previewFrame % n];
-					context.Color = new Cairo.Color(0, 0, 0);
-					frame.Draw(context);
-				}
+			if (m_preview == 0) {
+				m_app.Draw(context);
+			} else {
+				var n = m_app.Data.Frames.Count;
+				var frame = m_app.Data.Frames[m_previewFrame % n];
+				context.Color = new Cairo.Color(0, 0, 0);
+				frame.Draw(context);
 			}
-
-			base.OnExposeEvent (ev);
-			// Insert drawing code here.
-			return true;
 		}
 
 		protected override void OnSizeAllocated (Gdk.Rectangle allocation)
