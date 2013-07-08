@@ -1,18 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Windows/SketchWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SketchLib/Helpers/CanvasHelper.cs">
     <Files>
-      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="148" Column="2" />
-      <File FileName="SketchLib/Controls/SketchControl.cs" Line="127" Column="4" />
-      <File FileName="SketchLib/Helpers/CanvasHelper.cs" Line="27" Column="6" />
-      <File FileName="SketchLib/Objects/MouseToolAction.cs" Line="22" Column="29" />
+      <File FileName="SketchLib/Controls/SketchControl.cs" Line="146" Column="7" />
+      <File FileName="SketchLib/Helpers/CanvasHelper.cs" Line="213" Column="1" />
+      <File FileName="SketchLib/Objects/MouseToolAction.cs" Line="68" Column="1" />
+      <File FileName="SketchLib/Windows/SketchWindow.cs" Line="11" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Option id="ShowAllFiles" value="True" />
           <Node name="SketchLib" expanded="True">
-            <Node name="UserInterface" selected="True" />
+            <Node name="Controls" expanded="True" />
+            <Node name="Helpers" expanded="True">
+              <Node name="CanvasHelper.cs" selected="True" />
+            </Node>
             <Node name="Modules" expanded="True" />
             <Node name="Objects" expanded="True" />
             <Node name="Windows" expanded="True" />

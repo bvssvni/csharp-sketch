@@ -161,6 +161,7 @@ public partial class SketchWindow
 		this.sketchcontrol1 = new global::Sketch.SketchControl ();
 		this.sketchcontrol1.WidthRequest = 400;
 		this.sketchcontrol1.HeightRequest = 300;
+		this.sketchcontrol1.CanFocus = true;
 		this.sketchcontrol1.Name = "sketchcontrol1";
 		this.sketchcontrol1.Preview = false;
 		this.vbox2.Add (this.sketchcontrol1);

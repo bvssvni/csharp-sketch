@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
@@ -258,6 +258,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">400</property>
             <property name="HeightRequest">300</property>
+            <property name="CanFocus">True</property>
             <property name="Preview">False</property>
           </widget>
           <packing>

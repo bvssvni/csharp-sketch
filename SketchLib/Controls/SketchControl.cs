@@ -84,51 +84,47 @@ namespace Sketch
 			var mousedown = false;
 			var strokeHelper = new StrokeHelper();
 			StrokeAdvisor advisor = null;
-
-			// Insert initialization code here.
-			this.ButtonPressEvent += delegate(object o, Gtk.ButtonPressEventArgs args) {
-				if (args.Event.Button != 1) return;
-				if (m_app == null) return;
-				if (m_app.IsBusy()) return;
-
-				advisor = new StrokeAdvisor(m_app);
-				var frame = m_app.Data.Frames[m_app.SelectedFrame];
-				strokeHelper.Step1_SetFrame(frame);
-				strokeHelper.Step2_CreateStroke();
-				strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
-				mousedown = true;
-				advisor.Do(StrokeAdvisor.Event.StartStroke);
-			};
-			this.ButtonReleaseEvent += delegate(object o, Gtk.ButtonReleaseEventArgs args) {
-				if (args.Event.Button != 1) return;
-				if (m_app.IsBusy()) return;
-				if (advisor == null) return;
-
-				strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
-				strokeHelper.Step4_EndStroke(m_app);
-				mousedown = false;
-				advisor.Do(StrokeAdvisor.Event.EndStroke);
-			};
-			this.MotionNotifyEvent += delegate(object o, Gtk.MotionNotifyEventArgs args) {
-				if (!mousedown) return;
-				if (m_app == null) return;
-				if (m_app.IsBusy()) return;
-				if (advisor == null) return;
-
-				var state = (ModifierType)args.Event.State;
-				if ((state & ModifierType.Button1Mask) != 0) {
-					strokeHelper.Step3_AddPoint(new Point(args.Event.X, args.Event.Y));
-
-					advisor.Do(StrokeAdvisor.Event.Stroking);
-				}
-			};
-			
-			this.Events = EventMask.ButtonPressMask | EventMask.ButtonReleaseMask | EventMask.PointerMotionMask;
-
 			m_canvasViewHelper = new CanvasHelper ();
 			m_canvasViewHelper.Step1_SetControl (this);
 			m_canvasViewHelper.Step2_SetTargetResolution (m_settingsWidth, m_settingsHeight);
 			m_canvasViewHelper.Step3_SetRenderDelegate (Render);
+			m_canvasViewHelper.Step4_SetMouseToolActions (
+				new MouseToolAction[] {
+					new MouseToolAction () {
+					Button = MouseToolAction.MouseButton.Left,
+					Modifier = MouseToolAction.ModifierKey.None,
+					MouseDown = (x, y) => {
+						if (m_app == null) return;
+						if (m_app.IsBusy()) return;
+						
+						advisor = new StrokeAdvisor(m_app);
+						var frame = m_app.Data.Frames[m_app.SelectedFrame];
+						strokeHelper.Step1_SetFrame(frame);
+						strokeHelper.Step2_CreateStroke();
+						strokeHelper.Step3_AddPoint(new Point(x, y));
+						mousedown = true;
+						advisor.Do(StrokeAdvisor.Event.StartStroke);
+					},
+					MouseMove = (x, y) => {
+						if (m_app.IsBusy()) return;
+						if (advisor == null) return;
+						
+						strokeHelper.Step3_AddPoint(new Point(x, y));
+						strokeHelper.Step4_EndStroke(m_app);
+						mousedown = false;
+						advisor.Do(StrokeAdvisor.Event.EndStroke);
+					},
+					MouseUp = (x, y) => {
+						if (!mousedown) return;
+						if (m_app == null) return;
+						if (m_app.IsBusy()) return;
+						if (advisor == null) return;
+
+						strokeHelper.Step3_AddPoint(new Point(x, y));
+						advisor.Do(StrokeAdvisor.Event.Stroking);
+					}
+				}
+			});
 		}
 
 		public void RefreshGraphics() {
