@@ -138,9 +138,11 @@ public partial class SketchWindow
 		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "SketchWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
-		this.WindowPosition = ((global::Gtk.WindowPosition)(3));
+		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		this.BorderWidth = ((uint)(10));
 		this.AllowShrink = true;
+		this.DefaultWidth = 500;
+		this.DefaultHeight = 400;
 		// Container child SketchWindow.Gtk.Container+ContainerChild
 		this.vbox2 = new global::Gtk.VBox ();
 		this.vbox2.Name = "vbox2";
@@ -171,8 +173,6 @@ public partial class SketchWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 752;
-		this.DefaultHeight = 400;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.newAction.Activated += new global::System.EventHandler (this.OnNewActionActivated);
