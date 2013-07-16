@@ -6,3 +6,5 @@ A minimalistic animation software
 
 ![Download (Linux, Mac, Window)](https://github.com/bvssvni/csharp-sketch/raw/master/Sketch Binaries.zip)
 
+Requires ![Mono Framework](http://www.go-mono.com/mono-downloads/download.html)
+
