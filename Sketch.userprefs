@@ -4,15 +4,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Option id="ShowAllFiles" value="True" />
-          <Node name="SketchLib" expanded="True">
-            <Node name="Controls" expanded="True" />
-            <Node name="Helpers" expanded="True" />
-            <Node name="Objects" expanded="True">
-              <Node name="MouseToolAction.cs" selected="True" />
-            </Node>
-            <Node name="Windows" expanded="True" />
+          <Node name="Sketch" expanded="True">
+            <Node name="References" selected="True" />
           </Node>
+          <Node name="SketchInstaller" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
